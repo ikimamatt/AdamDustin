@@ -10,41 +10,67 @@
 </head>
 
 <body>
-    <footer class="bg-black w-full text-white relative flex justify-between p-16 gap-10">
-        <p class="italic text-2xl font-bold ">LOGO</p>
-        <div class="">
-            <p class="font-semibold text-lg underline underline-offset-8 mb-4">Social</p>
-            <div class="flex flex-col font-thin text-sm gap-5">
-                <a href="">Facebook</a>
-                <a href="">instagram</a>
-                <a href="">Tiktok</a>
-                <a href="">Twitter</a>
+    <footer class="bg-black w-full text-white relative p-8 md:p-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
+            <!-- Logo Section -->
+            <div class="flex flex-col items-center md:items-start">
+                <p class="italic text-2xl font-bold mb-4 text-center md:text-left">LOGO</p>
+                <p class="font-thin text-xs text-center md:text-left">Your slogan or description here</p>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="flex flex-col items-center md:items-start">
+                <p class="font-semibold text-lg underline underline-offset-8 mb-4">Social</p>
+                <div class="flex gap-6 mb-4">
+                    <a href="" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                        <i class="fab fa-tiktok text-xl"></i>
+                    </a>
+                    <a href="" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div class="flex flex-col items-center md:items-start">
+                <p class="font-semibold text-lg underline underline-offset-8 mb-4">Profil</p>
+                <div class="flex flex-col font-thin text-sm gap-4">
+                    <a href="" class="hover:text-gray-400">Profil</a>
+                    <a href="" class="hover:text-gray-400">Kegiatan</a>
+                    <a href="" class="hover:text-gray-400">xxx</a>
+                </div>
+            </div>
+
+            <!-- Activity Section -->
+            <div class="flex flex-col items-center md:items-start">
+                <p class="font-semibold text-lg underline underline-offset-8 mb-4">Kegiatan</p>
+                <div class="flex flex-col font-thin text-sm gap-4">
+                    <a href="" class="hover:text-gray-400">Berita</a>
+                    <a href="" class="hover:text-gray-400">Galeri</a>
+                    <a href="" class="hover:text-gray-400">Video</a>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="flex flex-col items-center md:items-start">
+                <p class="font-semibold text-lg underline underline-offset-8 mb-4">Hubungi</p>
+                <div class="flex flex-col font-thin text-sm gap-4">
+                    <a href="" class="hover:text-gray-400">Alamat</a>
+                    <a href="" class="hover:text-gray-400">No. HP</a>
+                </div>
             </div>
         </div>
-        <div class="">
-            <p class="font-semibold text-lg underline underline-offset-8 mb-4">Profil</p>
-            <div class="flex flex-col font-thin text-sm gap-5">
-                <a href="">Profil</a>
-                <a href="">Kegiatan</a>
-                <a href="">xxx</a>
-            </div>
+
+        <!-- Copyright Section -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-xs font-thin text-center md:text-left md:static">
+            @2024 .com All Rights Reserved
         </div>
-        <div class="">
-            <p class="font-semibold text-lg underline underline-offset-8 mb-4">Kegiatan</p>
-            <div class="flex flex-col font-thin text-sm gap-5">
-                <a href="">Berita</a>
-                <a href="">Galeri</a>
-                <a href="">Video</a>
-            </div>
-        </div>
-        <div class="">
-            <p class="font-semibold text-lg underline underline-offset-8 mb-4">Hubungi</p>
-            <div class="flex flex-col font-thin text-sm gap-5">
-                <a href="">Alamat</a>
-                <a href="">No. HP</a>
-            </div>
-        </div>
-        <div class="absolute bottom-4 font-thin text-xs left-1/2 -translate-x-1/2">@2024 .com All Rights Reverse</div>
     </footer>
 </body>
 
