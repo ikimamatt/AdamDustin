@@ -11,7 +11,6 @@
 
 <body>
     @include('Layout.Navbar')
-
     <div class=" w-full">
         {{-- #1 --}}
         <div class="bg-gradient-to-t from-black to-gray-400 h-[400px] xl:h-[600px] relative">

@@ -109,7 +109,7 @@
             <p class="mt-10">Dengan semangat 4As (kerja keras, kerja cerdas, kerja tuntas, kerja ikhlas) Sandi Uno </p>
 
             {{-- isi gerakan --}}
-            <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
                 <div class="w-full">
                     <p class="font-semibold text-lg pb-4">Penciptaan Lapangan Kerja</p>
                     <p class="font-light">
@@ -117,19 +117,19 @@
                     </p>
                 </div>
                 <div class="w-full">
-                    <p class="font-semibold text-lg">Perluasan Pertumbuhan UMKM</p>
+                    <p class="font-semibold text-lg pb-4">Perluasan Pertumbuhan UMKM</p>
                     <p class="font-light">
                         Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai industri untuk memajukan ekonomi masyarakat Indonesia.
                     </p>
                 </div>
                 <div class="w-full">
-                    <p class="font-semibold text-lg">Stabilitas Ekonomi, Harga Terjangkau</p>
+                    <p class="font-semibold text-lg pb-4">Stabilitas Ekonomi, Harga Terjangkau</p>
                     <p class="font-light">
                         Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai industri untuk memajukan ekonomi masyarakat Indonesia.
                     </p>
                 </div>
                 <div class="w-full">
-                    <p class="font-semibold text-lg">Inovasi Ekonomi Berkelanjutan</p>
+                    <p class="font-semibold text-lg pb-4">Inovasi Ekonomi Berkelanjutan</p>
                     <p class="font-light">
                         Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai industri untuk memajukan ekonomi masyarakat Indonesia.
                     </p>

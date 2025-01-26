@@ -11,3 +11,7 @@ Route::get('/Profil', function () {
 Route::get('/Berita', function () {
     return view('Berita');
 });
+
+Route::get('/admin', function () {
+    return view('admin.index');
+});
