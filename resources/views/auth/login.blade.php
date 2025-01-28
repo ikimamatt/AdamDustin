@@ -6,13 +6,13 @@
     <title>Dore jQuery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="stylesheet" href="{{ asset('assets4/font/iconsmind-s/css/iconsminds.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets4/font/simple-line-icons/css/simple-line-icons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/font/iconsmind-s/css/iconsminds.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/font/simple-line-icons/css/simple-line-icons.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset('assets4/css/vendor/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets4/css/vendor/bootstrap.rtl.only.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets4/css/vendor/bootstrap-float-label.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets4/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.rtl.only.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap-float-label.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
 </head>
 
 <body class="background show-spinner no-footer">
@@ -58,10 +58,10 @@
             </div>
         </div>
     </main>
-    <script src="{{ asset('assets4/js/vendor/jquery-3.3.1.min.js') }}"></script>
-    <script src="{{ asset('assets4/js/vendor/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets4/js/dore.script.js') }}"></script>
-    <script src="{{ asset('assets4/js/scripts.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/dore.script.js') }}"></script>
+    <script src="{{ asset('assets/js/scripts.js') }}"></script>
 </body>
 
 </html>
