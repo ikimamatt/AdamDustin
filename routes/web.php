@@ -14,9 +14,13 @@ Route::get('/Berita', function () {
 
 Route::get('/admin', function () {
     return view('admin.index');
-});
+})->name('dashboard');
 
 
 Route::get('/login', function () {
     return view('auth.login');
 });
+
+Route::get('/news.admin', function () {
+    return view('admin.news');
+})->name('admin.new');
