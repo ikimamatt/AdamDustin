@@ -51,7 +51,7 @@
                 </svg>
             </a>
 
-            <div class="search" data-search-path="Pages.Search.html?q=">
+            {{-- <div class="search" data-search-path="Pages.Search.html?q=">
                 <input placeholder="Search...">
                 <span class="search-icon">
                     <i class="simple-icon-magnifier"></i>
@@ -59,7 +59,7 @@
             </div>
 
             <a class="btn btn-sm btn-outline-primary ml-3 d-none d-md-inline-block"
-                href="https://1.envato.market/5kAb">&nbsp;BUY&nbsp;</a>
+                href="https://1.envato.market/5kAb">&nbsp;BUY&nbsp;</a> --}}
         </div>
 
         <a class="navbar-logo" href="Dashboard.Default.html">
@@ -177,7 +177,7 @@
                             <span>Dashboards</span>
                         </a>
                     </li>
-                    <li class="{{ request()->is('/admin.news') ? 'active' : 'uppercase text-base tracking-wide hover:text-sky-300 transition-colors duration-300 ease-in-out' }}">
+                    <li>
                         <a href="#layouts">
                             <i class="iconsminds-digital-drawing"></i> Pages
                         </a>
@@ -192,14 +192,105 @@
                     <li>
                         <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true"
                             aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50">
-                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">footer</span>
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Home</span>
                         </a>
                         <div id="collapseAuthorization" class="collapse show">
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
                                     <a href="{{ route('admin.new') }}">
+                                        <i class="iconsminds-monitor"></i> <span
+                                            class="d-inline-block">jumbotron</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="{{ route('admin.new') }}">
+                                        <i class="iconsminds-newspaper"></i> <span
+                                            class="d-inline-block">News</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="{{ route('admin.new') }}">
                                         <i class="simple-icon-user-following"></i> <span
-                                            class="d-inline-block">news</span>
+                                            class="d-inline-block">Introduction</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="{{ route('admin.new') }}">
+                                        <i class="iconsminds-instagram"></i> <span
+                                            class="d-inline-block">Social Media</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="{{ route('admin.new') }}">
+                                        <i class="simple-icon-note"></i> <span
+                                            class="d-inline-block">Visi & Misi</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="{{ route('admin.new') }}">
+                                        <i class="iconsminds-video-tripod"></i> <span
+                                            class="d-inline-block">Video </span>
+
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="{{ route('admin.new') }}">
+                                        <i class="iconsminds-video-tripod"></i> <span
+                                            class="d-inline-block">Gallery </span>
+
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="{{ route('admin.new') }}">
+                                        <i class="iconsminds-video-tripod"></i> <span
+                                            class="d-inline-block">Footerd </span>
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#profile" aria-expanded="true"
+                            aria-controls="profile" class="rotate-arrow-icon opacity-50">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Profile</span>
+                        </a>
+                        <div id="profile" class="collapse show">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Auth.Login.html">
+                                        <i class="simple-icon-user"></i> <span
+                                            class="d-inline-block">Photo</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Auth.Login.html">
+                                        <i class="iconsminds-file-edit"></i> <span
+                                            class="d-inline-block">Biography</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="Pages.Auth.Login.html">
+                                        <i class="iconsminds-file-edit"></i> <span
+                                            class="d-inline-block">Biography 2</span>
                                     </a>
                                 </li>
                             </ul>
@@ -224,99 +315,7 @@
                 </ul>
 
 
-                <ul class="list-unstyled" data-link="menu" id="menuTypes">
-                    <li>
-                        <a href="#" data-toggle="collapse" data-target="#collapseMenuTypes" aria-expanded="true"
-                            aria-controls="collapseMenuTypes" class="rotate-arrow-icon">
-                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Menu Types</span>
-                        </a>
-                        <div id="collapseMenuTypes" class="collapse show" data-parent="#menuTypes">
-                            <ul class="list-unstyled inner-level-menu">
-                                <li>
-                                    <a href="Menu.Default.html">
-                                        <i class="simple-icon-control-pause"></i> <span
-                                            class="d-inline-block">Default</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Menu.Subhidden.html">
-                                        <i class="simple-icon-arrow-left mi-subhidden"></i> <span
-                                            class="d-inline-block">Subhidden</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Menu.Hidden.html">
-                                        <i class="simple-icon-control-start mi-hidden"></i> <span
-                                            class="d-inline-block">Hidden</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Menu.Mainhidden.html">
-                                        <i class="simple-icon-control-rewind mi-hidden"></i> <span
-                                            class="d-inline-block">Mainhidden</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#" data-toggle="collapse" data-target="#collapseMenuLevel" aria-expanded="true"
-                            aria-controls="collapseMenuLevel" class="rotate-arrow-icon collapsed">
-                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Menu Levels</span>
-                        </a>
-                        <div id="collapseMenuLevel" class="collapse" data-parent="#menuTypes">
-                            <ul class="list-unstyled inner-level-menu">
-                                <li>
-                                    <a href="#">
-                                        <i class="simple-icon-layers"></i> <span class="d-inline-block">Sub
-                                            Level</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" data-toggle="collapse" data-target="#collapseMenuLevel2"
-                                        aria-expanded="true" aria-controls="collapseMenuLevel2"
-                                        class="rotate-arrow-icon collapsed">
-                                        <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Another
-                                            Level</span>
-                                    </a>
-                                    <div id="collapseMenuLevel2" class="collapse">
-                                        <ul class="list-unstyled inner-level-menu">
-                                            <li>
-                                                <a href="#">
-                                                    <i class="simple-icon-layers"></i> <span class="d-inline-block">Sub
-                                                        Level</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#" data-toggle="collapse" data-target="#collapseMenuDetached" aria-expanded="true"
-                            aria-controls="collapseMenuDetached" class="rotate-arrow-icon collapsed">
-                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Detached</span>
-                        </a>
-                        <div id="collapseMenuDetached" class="collapse">
-                            <ul class="list-unstyled inner-level-menu">
-                                <li>
-                                    <a href="#">
-                                        <i class="simple-icon-layers"></i> <span class="d-inline-block">Sub
-                                            Level</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dont-close-menu">
-                            <a href="#">
-                                <i class="simple-icon-arrow-right"></i> <span class="d-inline-block">Keep Sub Open</span>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+
 
             </div>
         </div>

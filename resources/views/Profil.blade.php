@@ -48,24 +48,23 @@
             </div>
         </div>
         {{-- #4 --}}
-        <div class="w-full py-16 px-16 xl:px-32 flex flex-col gap-2 justify-center">
-            <p class="text-2xl font-bold  ">Terhubung dengan Adam Dustin</p>
-
-            <div class="flex flex-wrap justify-center gap-4 lg:gap-0">
+        <div class="w-full py-28 px-4 lg:px-16 xl:px-32 flex flex-col gap-4 justify-center">
+            <p class="text-xl font-bold text-center lg:text-left">Terhubung dengan Adam Dustin</p>
+            <div class="flex justify-center gap-4">
                 <a href="" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/sosmed.png" class="w-40 sm:w-52 lg:w-[219px] xl:w-[313px]" alt="">
+                    <img src="/img/sosmed.png" class="w-32 sm:w-40 lg:w-[219px] xl:w-[313px]" alt="">
                     <p class="absolute bottom-2 left-2 font-bold text-white">Facebook</p>
                 </a>
                 <a href="" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/sosmed.png" class="w-40 sm:w-52 lg:w-[219px] xl:w-[313px]" alt="">
+                    <img src="/img/sosmed.png" class="w-32 sm:w-40 lg:w-[219px] xl:w-[313px]" alt="">
                     <p class="absolute bottom-2 left-2 font-bold text-white">Instagram</p>
                 </a>
                 <a href="" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/sosmed.png" class="w-40 sm:w-52 lg:w-[219px] xl:w-[313px]" alt="">
+                    <img src="/img/sosmed.png" class="w-32 sm:w-40 lg:w-[219px] xl:w-[313px]" alt="">
                     <p class="absolute bottom-2 left-2 font-bold text-white">Tiktok</p>
                 </a>
                 <a href="" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/sosmed.png" class="w-40 sm:w-52 lg:w-[219px] xl:w-[313px]" alt="">
+                    <img src="/img/sosmed.png" class="w-32 sm:w-40 lg:w-[219px] xl:w-[313px]" alt="">
                     <p class="absolute bottom-2 left-2 font-bold text-white">Twitter</p>
                 </a>
             </div>
@@ -89,60 +88,39 @@
         {{-- #6 --}}
         <div class="bg-black w-full text-white p-16 xl:px-32 my-10">
             <p class="font-thin italic">GERAKAN ADAM...</p>
-            <p class="text-3xl font-semibold max-w-xl">"Sukses itu gaada rahasianya. Sukses itu kombinasi persiapan yang
-                matang, kerja keras, dan belajar dari kegagalan"</p>
+            <p class="text-3xl font-semibold max-w-xl">"Sukses itu gaada rahasianya. Sukses itu kombinasi persiapan yang matang, kerja keras, dan belajar dari kegagalan"</p>
             <p class="mt-10">Dengan semangat 4As (kerja keras, kerja cerdas, kerja tuntas, kerja ikhlas) Sandi Uno </p>
-            <div class="mt-20 flex flex-wrap gap-10">
-                <div class=" w-72">
-                    <p class=" font-semibold text-lg">Penciptaan Lapangan Kerja</p>
-                    <p class="font-thin">Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai
-                        industri untuk memajukan ekonomi masyarakat Indonesia.</p>
+
+            {{-- isi gerakan --}}
+            <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div class="w-full">
+                    <p class="font-semibold text-lg pb-4">Penciptaan Lapangan Kerja</p>
+                    <p class="font-light">
+                        Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai industri untuk memajukan ekonomi masyarakat Indonesia.
+                    </p>
                 </div>
-                <div class=" w-72">
-                    <p class=" font-semibold text-lg">Perluasan Pertumbuhan UMKM</p>
-                    <p class="font-thin">Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai
-                        industri untuk memajukan ekonomi masyarakat Indonesia.</p>
+                <div class="w-full">
+                    <p class="font-semibold text-lg pb-4">Perluasan Pertumbuhan UMKM</p>
+                    <p class="font-light">
+                        Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai industri untuk memajukan ekonomi masyarakat Indonesia.
+                    </p>
                 </div>
-                <div class=" w-72">
-                    <p class=" font-semibold text-lg">Stabilitas Ekonomi, Harga Terjangkau</p>
-                    <p class="font-thin">Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai
-                        industri untuk memajukan ekonomi masyarakat Indonesia.</p>
+                <div class="w-full">
+                    <p class="font-semibold text-lg pb-4">Stabilitas Ekonomi, Harga Terjangkau</p>
+                    <p class="font-light">
+                        Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai industri untuk memajukan ekonomi masyarakat Indonesia.
+                    </p>
                 </div>
-                <div class=" w-72">
-                    <p class=" font-semibold text-lg">Inovasi Ekonomi Berkelanjutan</p>
-                    <p class="font-thin">Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai
-                        industri untuk memajukan ekonomi masyarakat Indonesia.</p>
+                <div class="w-full">
+                    <p class="font-semibold text-lg pb-4">Inovasi Ekonomi Berkelanjutan</p>
+                    <p class="font-light">
+                        Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai industri untuk memajukan ekonomi masyarakat Indonesia.
+                    </p>
                 </div>
             </div>
         </div>
+
         {{-- #7 --}}
-        <div class="bg-white w-full p-16">
-            <p class="italic text-center">GALERI ADAM...</p>
-            <p class="font-semibold text-3xl text-center max-w-96 mx-auto mb-8">Momen Adam Dustin Dalam Kegiatan
-                Sehari-hari
-            </p>
-            <div class="bg-white w-20 h-1 rounded-lg mx-auto"></div>
-        </div>
-        <div class="bg-white w-full lg:overflow-x-auto overflow-y-hidden">
-            <div class="flex xl:flex-wrap">
-                <img src="/img/lexa.png" alt=""
-                    class="w-40 sm:w-60 lg:w-72 xl:w-96 scale-100 hover:scale-105 transition ease-in-out duration-150">
-                <div class="relative">
-                    <div
-                        class="bg-black absolute h-full w-40 sm:w-60 lg:w-72 xl:w-96 flex flex-col justify-center gap-2">
-                        <img src="/img/lexa.png" alt=""
-                            class="opacity-40 w-40 sm:w-60 lg:w-72 xl:w-96 absolute z-10">
-                        <p
-                            class="text-center text-white text-xs sm:text-base max-w-24 sm:max-w-36 mx-auto font font-semibold z-10">
-                            Dan Banyak Momen Lainnya</p>
-                        <a href="/"
-                            class="bg-white text-center mx-auto max-w-48 font-semibold text-black rounded-full px-4 p-1 text-xs sm:text-base z-20">Lebih
-                            Lanjut</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{-- #8 --}}
         <div class="">
             <p class="italic text-base pt-16 xl:px-32">BERITA ADAM...</p>
             <p class="font-semibold text-3xl xl:px-32">Ikut keseharian Adam Dustin</p>
