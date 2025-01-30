@@ -37,18 +37,18 @@
                                 <span class="logo-single"></span>
                             </a>
                             <h6 class="mb-4">Login</h6>
-                            <form>
+                            <form method="POST" action="{{ route('login') }}">
+                                @csrf
                                 <label class="form-group has-float-label mb-4">
-                                    <input class="form-control" />
+                                    <input type="email" class="form-control" id="email" name="email" required />
                                     <span>E-mail</span>
                                 </label>
 
                                 <label class="form-group has-float-label mb-4">
-                                    <input class="form-control" type="password" placeholder="" />
+                                    <input  type="password" class="form-control" id="password" name="password" required>
                                     <span>Password</span>
                                 </label>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#">Forget password?</a>
                                     <button class="btn btn-primary btn-lg btn-shadow" type="submit">LOGIN</button>
                                 </div>
                             </form>

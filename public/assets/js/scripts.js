@@ -17,7 +17,10 @@ function loadStyle(href, callback) {
   var link = document.createElement("link");
   link.rel = "stylesheet";
   link.type = "text/css";
-  link.href = href;
+   // Menggunakan window.location.origin untuk mendapatkan root URL aplikasi
+   link.href = window.location.origin + '/' + href;
+
+
   if (callback) {
     link.onload = function () {
       callback();
