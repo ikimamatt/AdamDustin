@@ -16,19 +16,19 @@
           <!-- Menu Desktop -->
           <div class="hidden sm:flex space-x-8 items-center text-white">
             <a
-                href="/Berita"
+                href="{{ route('berita') }}"
                 class="{{ request()->is('Berita') ? 'uppercase text-base bg-white text-black px-4 py-2 rounded-full' : 'uppercase text-base tracking-wide hover:text-sky-300 transition-colors duration-300 ease-in-out' }}"
             >
                 Berita
             </a>
             <a
-                href="/Profil"
+                href="{{ route('profil') }}"
                 class="{{ request()->is('Profil') ? 'uppercase text-base bg-white text-black px-4 py-2 rounded-full' : 'uppercase text-base tracking-wide hover:text-sky-300 transition-colors duration-300 ease-in-out' }}"
             >
                 Profil
             </a>
             <a
-                href="/"
+                href="{{ route('home') }}"
                 class="{{ request()->is('/') ? 'uppercase text-base bg-white text-black px-4 py-2 rounded-full' : 'uppercase text-base tracking-wide hover:text-sky-300 transition-colors duration-300 ease-in-out' }}"
             >
                 Beranda

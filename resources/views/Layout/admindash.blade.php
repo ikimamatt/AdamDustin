@@ -162,7 +162,12 @@
                     <a class="dropdown-item" href="#">Features</a>
                     <a class="dropdown-item" href="#">History</a>
                     <a class="dropdown-item" href="#">Support</a>
-                    <a class="dropdown-item" href="#">Sign out</a>
+                    <a class="dropdown-item" href="#">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="btn btn-danger">Logout</button>
+                    </form>
+                    </a>
                 </div>
             </div>
         </div>
