@@ -177,7 +177,7 @@
             <div class="scroll">
                 <ul class="list-unstyled">
                     <li class="active">
-                        <a href="#">
+                        <a href="{{ route('dashboard') }}">
                             <i class="iconsminds-shop-4"></i>
                             <span>Dashboards</span>
                         </a>
@@ -202,7 +202,7 @@
                         <div id="collapseAuthorization" class="collapse show">
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="{{ route('admin.new') }}">
+                                    <a href="{{ route('jumbotron.index') }}">
                                         <i class="iconsminds-monitor"></i> <span
                                             class="d-inline-block">jumbotron</span>
                                     </a>
@@ -210,7 +210,7 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="{{ route('admin.new') }}">
+                                    <a href="{{ route('news.index') }}">
                                         <i class="iconsminds-newspaper"></i> <span
                                             class="d-inline-block">News</span>
                                     </a>
@@ -218,7 +218,7 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="{{ route('admin.new') }}">
+                                    <a href="">
                                         <i class="simple-icon-user-following"></i> <span
                                             class="d-inline-block">Introduction</span>
                                     </a>
@@ -226,7 +226,7 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="{{ route('admin.new') }}">
+                                    <a href="">
                                         <i class="iconsminds-instagram"></i> <span
                                             class="d-inline-block">Social Media</span>
                                     </a>
@@ -234,7 +234,7 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="{{ route('admin.new') }}">
+                                    <a href="">
                                         <i class="simple-icon-note"></i> <span
                                             class="d-inline-block">Visi & Misi</span>
                                     </a>
@@ -242,7 +242,7 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="{{ route('admin.new') }}">
+                                    <a href="">
                                         <i class="iconsminds-video-tripod"></i> <span
                                             class="d-inline-block">Video </span>
 
@@ -251,7 +251,7 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="{{ route('admin.new') }}">
+                                    <a href="">
                                         <i class="iconsminds-video-tripod"></i> <span
                                             class="d-inline-block">Gallery </span>
 
@@ -260,7 +260,7 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="{{ route('admin.new') }}">
+                                    <a href="">
                                         <i class="iconsminds-video-tripod"></i> <span
                                             class="d-inline-block">Footerd </span>
 
@@ -388,7 +388,10 @@
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
 
-
+    {{-- <script>
+    if (!sessionStorage.getItem('loggedIn')) {
+        window.location.href = '/login';
+    }</script> --}}
 </body>
 
 

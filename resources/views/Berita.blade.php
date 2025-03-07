@@ -6,7 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
-    <title>Profil</title>
+    <title>News</title>
+    <style>
+        /* Class untuk gambar yang digeser ke kanan */
+    .img-shift-right {
+        transform: translateX(20px); /* Geser gambar ke kanan */
+    }
+
+    /* Class untuk teks yang digeser ke kiri */
+    .text-shift-left {
+        margin-left: 20px; /* Geser teks ke kiri */
+    }
+
+    /* Optional: Adjust padding for mobile view */
+    .padding-mobile {
+        padding-left: 20px;
+    }
+
+    </style>
 </head>
 
 <body>
@@ -15,23 +32,23 @@
     <div class=" w-full">
         {{-- #1 --}}
         <div class="bg-gradient-to-t from-black to-gray-400 h-[400px] xl:h-[600px] relative">
-            <div class="bg-gradient-to-b from-black text-white h-full w-72 sm:w-1/2 left-16 absolute top-0">
-                <p class="ml-10 mt-56 xl:mt-72 font-bold text-4xl xl:text-5xl">Kegiatan</p>
-                <p class="ml-10 font-thin mt-2">ADAM DUSTIN BAKHRI</p>
+            <div class="bg-gradient-to-b from-black text-white h-full w-188 sm:w-1/2 left-16 absolute top-0 text-shift-left">
+                <p class="ml-1 mt-56 xl:mt-72 font-bold text-4xl xl:text-4xl">Kegiatan</p>
+                <p class="ml-1 font-thin mt-2">ADAM DUSTIN BHAKTI</p>
             </div>
-            <img src="/img/org3.png" alt=""
-                class="w-[440px] sm:w-[470px] lg:w-[500px] xl:w-[700px] absolute bottom-0 -right-10 md:right-20 lg:right-36 xl:right-72">
+            <img src="/img/org3.png" alt="" class="w-[400px] sm:w-[430px] lg:w-[450px] xl:w-[650px] absolute bottom-0 -right-10 md:right-20 lg:right-36 xl:right-72 img-shift-right">
         </div>
-        {{-- #2 --}}
-        <div class="p-16 xl:px-32">
+
+        <div class="p-16 xl:px-32 padding-mobile">
             <div class="flex">
                 <input type="text" name="" id="" placeholder="Cari Berita..."
-                    class=" text-white w-full p-3 placeholder:text-white placeholder:italic rounded-l-full bg-gradient-to-r from-black to-gray-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12 p-2 rounded-r-full my-auto bg-gray-400">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                      </svg>
+                    class="text-white w-full p-3 placeholder:text-white placeholder:italic rounded-l-full bg-gradient-to-r from-black to-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12 p-2 rounded-r-full my-auto bg-gray-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
             </div>
         </div>
+
         {{-- #3 --}}
         <div class="">
             <p class="italic text-base px-16 xl:px-32">BERITA ADAM...</p>
