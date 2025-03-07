@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SignatureNewsController;
 
 Route::get('/test', function () {
     return view('admin.index');
@@ -30,6 +31,12 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     // })->name('admin.new');
     // Route::resource('jumbotron', JumbotronController::class);
     Route::resource('news', NewsController::class);
+    Route::resource('signaturenews', SignatureNewsController::class);
+    Route::post('/news/feature', [SignatureNewsController::class, 'featureNews'])->name('news.featureNews');
+    Route::post('news/feature', [SignatureNewsController::class, 'featureNews'])->name('news.featureNews');
+    Route::put('signaturenews/{news}/edit', [SignatureNewsController::class, 'update'])->name('signaturenews.update');
+    Route::delete('/signaturenews/{news}', [SignatureNewsController::class, 'destroy'])->name('signaturenews.destroy');
+    Route::post('news/store', [SignatureNewsController::class, 'store'])->name('news.store');
     Route::get('/jumbotron', [JumbotronController::class, 'index'])->name('jumbotron.index');
     Route::get('jumbotron/create', [JumbotronController::class, 'create'])->name('jumbotron.create');
     Route::post('jumbotron', [JumbotronController::class, 'store'])->name('jumbotron.store');

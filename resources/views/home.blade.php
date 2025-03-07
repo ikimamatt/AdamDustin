@@ -6,58 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
+    @vite('resources/css/home.css')
     <title>Home</title>
     @include('Layout.Navbar')
 </head>
 
 <body>
-        <div class="pt-20">
-            <div class="max-h-72 sm:max-h-96 lg:max-h-[600px] relative overflow-hidden">
-                <img src="/img/home.png" alt="" class="w-full">
-                <div class="bg-gradient-to-t from-black to-white opacity-50 w-full h-96 lg:h-[600px] absolute top-0">
-                </div>
-                <div class="bg-black h-full w-full sm:w-1/2 opacity-50 p-4 sm:p-6 md:p-10 lg:p-16 absolute top-0">
-                    <p class="text-white font-bold text-2xl sm:text-3xl lg:text-5xl">Adam
-                        <br>Dustin <br>Bhakti
-                    </p>
-                    <p class="text-white font-thin italic text-sm sm:text-lg mt-2">
-                        "Kerja Ikhlas, Kerja Cerdas, <br>Kerja Tuntas, Kerja Jujur."
-                    </p>
-                </div>
-                <img src="/img/org.png" alt=""
-                    class="w-64 sm:w-[440px] md:w-[630px] lg:w-[800px] absolute top-10 right-2 sm:right-10 lg:top-40 lg:right-36 xl:right-72">
-                <div
-                    class="invisible sm:visible absolute top-10 lg:top-40 w-full sm:w-3/4 xl:w-1/2 font-semibold text-sm lg:text-lg xl:text-2xl text-white right-0 p-4">
-                    <p class="text-center lg:text-right">“Melakukan hal-hal tanpa batas serta berusaha dengan tekad konsisten dan persisten, maka tidak
-                        ada mimpi yang tidak bisa kita gapai.”</p>
-                </div>
-            </div>
+<div class="pt-20">
+    <div class="max-h-72 sm:max-h-96 lg:max-h-[600px] relative overflow-hidden">
+        <img src="{{ asset('storage/' . $jumbotron->background_image) }}" alt="" class="w-full">
+        <div class="bg-gradient-to-t from-black to-white opacity-50 w-full h-96 lg:h-[600px] absolute top-0">
         </div>
+        <div class="bg-black h-full w-full sm:w-1/2 opacity-50 p-4 sm:p-6 md:p-10 lg:p-16 absolute top-0">
+            <p class="text-white font-bold text-2xl sm:text-3xl lg:text-5xl">Adam
+                <br>Dustin <br>Bhakti
+            </p>
+            <p class="text-white font-thin italic text-sm sm:text-lg mt-2 text-wrap">
+                "{{ $jumbotron->text_left }}"
+            </p>
+        </div>
+        <img src="{{ asset('storage/' . $jumbotron->profile_image) }}" alt=""
+            class="w-64 sm:w-[440px] md:w-[630px] lg:w-[800px] absolute top-10 right-2 sm:right-10 lg:top-40 lg:right-36 xl:right-72">
+        <div class="invisible sm:visible absolute top-10 lg:top-40 w-full sm:w-3/4 xl:w-1/2 font-semibold text-sm lg:text-lg xl:text-2xl text-white right-0 p-4">
+            <p class="text-center lg:text-right">{{ $jumbotron->text_right }}</p>
+        </div>
+    </div>
+</div>
 
-        {{-- #1 --}}
-        <div class="bg-gray-600 w-full p-4 flex flex-col sm:flex-row sm:flex-wrap justify-center lg:gap-5 text-white">
-            <div class="w-full sm:w-52 my-2 sm:w-60 lg:w-72">
-                <p class="font-bold text-sm sm:text-xl">Terpilih Aklamasi, Adam Dipercaya Pimpin BPC HIPMI Balikpapan</p>
-                <p class="font-thin my-2 text-xs sm:text-sm sm:my-5">Ketua HIMPI Kota Balikpapan, Adam Dustin Bhakti, yang terpilih secara
-                    aklamasi, menjelaskan program...</p>
-                <a href="" class="bg-gray-200 text-black rounded-full p-1 text-xs sm:text-base px-5 opacity-90">Lebih
-                    Lanjut</a>
-            </div>
-            <div class="w-full sm:w-52 my-2 sm:w-60 lg:w-72">
-                <p class="font-bold text-sm sm:text-xl">Terpilih Aklamasi, Adam Dipercaya Pimpin BPC HIPMI Balikpapan</p>
-                <p class="font-thin my-2 text-xs sm:text-sm sm:my-5">Ketua HIMPI Kota Balikpapan, Adam Dustin Bhakti, yang terpilih secara
-                    aklamasi, menjelaskan program...</p>
-                <a href="" class="bg-gray-200 text-black rounded-full p-1 text-xs sm:text-base px-5 opacity-90">Lebih
-                    Lanjut</a>
-            </div>
-            <div class="w-full sm:w-52 my-2 sm:w-60 lg:w-72">
-                <p class="font-bold text-sm sm:text-xl">Terpilih Aklamasi, Adam Dipercaya Pimpin BPC HIPMI Balikpapan</p>
-                <p class="font-thin my-2 text-xs sm:text-sm sm:my-5">Ketua HIMPI Kota Balikpapan, Adam Dustin Bhakti, yang terpilih secara
-                    aklamasi, menjelaskan program...</p>
-                <a href="" class="bg-gray-200 text-black rounded-full p-1 text-xs sm:text-base px-5 opacity-90">Lebih
-                    Lanjut</a>
-            </div>
+
+<div class="bg-gray-600 w-full p-4 flex flex-col sm:flex-row sm:flex-wrap justify-center lg:gap-5 text-white">
+    @foreach($featuredNews as $item)
+    <div class="w-full sm:w-52 my-2 sm:w-60 lg:w-72 flex flex-col justify-between h-full">
+        <p class="font-bold text-sm sm:text-xl">{{ $item->title }}</p>
+        <p class="font-thin my-2 text-xs sm:text-sm sm:my-5 text-justify">{{ $item->subtitle }}</p>
+        <div class="flex justify-between mt-auto">
+            <a href="{{ $item->link }}" class="bg-gray-200 text-black rounded-full p-2 text-xs sm:text-base px-6 opacity-90" target="_blank">Lebih Lanjut</a>
         </div>
+    </div>
+    @endforeach
+</div>
+
+
+
+
 
         {{-- #2 --}}
         <div class="w-full py-5 flex flex-col lg:flex-row gap-5 justify-center">
