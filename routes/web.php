@@ -18,6 +18,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/Berita', [HomeController::class, 'berita'])->name('berita');
 Route::get('/Profil', [HomeController::class, 'profil'])->name('profil');
+Route::get('/galery', [HomeController::class, 'galery'])->name('galery');
 
 // Rute admin (protected)
 Route::middleware('admin')->prefix('admin')->group(function () {
