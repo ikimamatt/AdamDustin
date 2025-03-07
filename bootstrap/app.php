@@ -11,14 +11,16 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-          $middleware->web([
-            \App\Http\Middleware\AdminMiddleware::class,
+        $middleware->web([
+            \App\Http\Middleware\AdminMiddleware::class,  // Pastikan ini ada
         ]);
 
+        // Jika perlu alias untuk admin
         $middleware->alias([
             'admin' => \App\Http\Middleware\AdminMiddleware::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
-        //
-    })->create();
+        // Configure any exception handling logic if needed
+    })
+    ->create();

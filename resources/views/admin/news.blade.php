@@ -3,16 +3,14 @@
 
 <div class="row">
     <div class="col-12">
-        <h1>Section Berita</h1>
+        <h1>News Section</h1>
 
         <div class="top-right-button-container">
-            <button type="button" class="btn btn-outline-success" data-toggle="modal"
-                data-target="#exampleModal">
+            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#createNewsModal">
                 Create
             </button>
             <div class="btn-group">
-                <button class="btn btn-outline-primary btn-lg dropdown-toggle" type="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-outline-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     EXPORT
                 </button>
                 <div class="dropdown-menu">
@@ -24,13 +22,13 @@
             </div>
         </div>
 
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
 
         <div class="mb-2">
-            <a class="btn pt-0 pl-0 d-inline-block d-md-none" data-toggle="collapse" href="#displayOptions"
-                role="button" aria-expanded="true" aria-controls="displayOptions">
-                Display Options
-                <i class="simple-icon-arrow-down align-middle"></i>
-            </a>
             <div class="collapse dont-collapse-sm" id="displayOptions">
                 <div class="d-block d-md-inline-block">
                     <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
@@ -38,9 +36,8 @@
                     </div>
                 </div>
                 <div class="float-md-right dropdown-as-select" id="pageCountDatatable">
-                    <span class="text-muted text-small">Displaying 1-10 of 40 items </span>
-                    <button class="btn btn-outline-dark btn-xs dropdown-toggle" type="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="text-muted text-small">Displaying {{ $news->count() }} items </span>
+                    <button class="btn btn-outline-dark btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         10
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
@@ -57,184 +54,134 @@
 
 <div class="row">
     <div class="col-12 mb-4 data-table-rows data-tables-hide-filter">
-        <table id="datatableRows" class="data-table responsive nowrap"
-            data-order="[[ 1, &quot;desc&quot; ]]">
+        <table id="datatableRows" class="data-table responsive nowrap">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Sales</th>
-                    <th>Stock</th>
+                    <th>Title</th>
+                    <th>Subtitle</th>
                     <th>Category</th>
-                    <th class="empty">&nbsp;</th>
+                    <th>Image</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
+                @foreach($news as $item)
+                <tr>
+                    <td>
+                        <p class="list-item-heading">{{ $item->title }}</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">{{ $item->subtitle }}</p>
+                    </td>
+                    <td>
+                        <p class="text-muted">{{ $item->category }}</p>
+                    </td>
+                    <td>
+                        @if($item->image)
+                            <img src="{{ asset('storage/' . $item->image) }}" alt="News Image" style="max-width: 50px;">
 
-                <tr>
-                    <td>
-                        <p class="list-item-heading">Faworki</p>
+                        @else
+                            <p>No Image</p>
+                        @endif
                     </td>
                     <td>
-                        <p class="text-muted">783</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">38</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">Desserts</p>
-                    </td>
-                    <td>
-                        <label
-                            class="custom-control custom-checkbox mb-1 align-self-center data-table-rows-check">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-label">&nbsp;</span>
-                        </label>
+                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editNewsModal{{ $item->id }}">
+                            Edit
+                        </button>
+                        <form action="{{ route('news.destroy', $item) }}" method="POST" class="d-inline">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</button>
+                        </form>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <p class="list-item-heading">Kabuni</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">749</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">148</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">Cupcakes</p>
-                    </td>
-                    <td>
-                        <label
-                            class="custom-control custom-checkbox mb-1 align-self-center data-table-rows-check">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-label">&nbsp;</span>
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="list-item-heading">Buccellato</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">738</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">51</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">Desserts</p>
-                    </td>
-                    <td>
-                        <label
-                            class="custom-control custom-checkbox mb-1 align-self-center data-table-rows-check">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-label">&nbsp;</span>
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="list-item-heading">Vínarterta</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">711</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">49</p>
-                    </td>
-                    <td>
-                        <p class="text-muted">Desserts</p>
-                    </td>
-                    <td>
-                        <label
-                            class="custom-control custom-checkbox mb-1 align-self-center data-table-rows-check">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-label">&nbsp;</span>
-                        </label>
-                    </td>
-                </tr>
+
+                <!-- Edit Modal for each news item -->
+                <div class="modal fade" id="editNewsModal{{ $item->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edit News</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="{{ route('news.update', $item) }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                @method('PUT')
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label>Title</label>
+                                        <input type="text" class="form-control" name="title" value="{{ $item->title }}" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Subtitle</label>
+                                        <input type="text" class="form-control" name="subtitle" value="{{ $item->subtitle }}" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Category</label>
+                                        <input type="text" class="form-control" name="category" value="{{ $item->category }}" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Image</label>
+                                        <input type="file" class="form-control" name="image">
+                                        <small class="form-text text-muted">Leave empty to keep current image</small>
+                                        @if($item->image)
+                                            <img src="{{ Storage::url('public/news/' . $item->image) }}" alt="News Image" style="max-width: 100px; margin-top: 10px;">
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Update</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
             </tbody>
         </table>
     </div>
 </div>
 
- <!-- Modal -->
- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog  modal-lg" role="document">
+<!-- Create News Modal -->
+<div class="modal fade" id="createNewsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title">Create News</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4"
-                                placeholder="Password">
-                        </div>
+            <form action="{{ route('news.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" class="form-control" name="title" required>
                     </div>
                     <div class="form-group">
-                        <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress"
-                            placeholder="1234 Main St">
+                        <label>Subtitle</label>
+                        <input type="text" class="form-control" name="subtitle" required>
                     </div>
                     <div class="form-group">
-                        <label for="inputAddress2">Address 2</label>
-                        <input type="text" class="form-control" id="inputAddress2"
-                            placeholder="Apartment, studio, or floor">
+                        <label>Category</label>
+                        <input type="text" class="form-control" name="category" required>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputCity">City</label>
-                            <input type="text" class="form-control" id="inputCity">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputState">State</label>
-                            <select id="inputState" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="inputZip">Zip</label>
-                            <input type="text" class="form-control" id="inputZip">
-                        </div>
+                    <div class="form-group">
+                        <label>Image</label>
+                        <input type="file" class="form-control" name="image" required>
                     </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                            value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">1</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                            value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">2</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"
-                            disabled>
-                        <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary d-block mt-3">Sign in</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary"
-                    data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
+
 @endsection

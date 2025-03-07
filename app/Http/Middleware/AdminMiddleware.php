@@ -9,8 +9,8 @@ class AdminMiddleware
 {
     public function handle(Request $request, Closure $next)
     {
-        // Cek jika user belum login dan bukan di halaman login
-        if (!auth()->check() && !$request->is('login')) {
+        // Cek jika user belum login dan mencoba mengakses halaman admin
+        if (!auth()->check() && $request->is('admin/*')) {
             return redirect('/login');
         }
 

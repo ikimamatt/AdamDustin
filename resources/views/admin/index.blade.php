@@ -83,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <div class="icon-cards-row">
+        {{-- <div class="icon-cards-row">
             <div class="glide dashboard-numbers">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
@@ -126,14 +126,16 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
 
     </div>
 
 
 </div>
-<div class="row">
+
+{{-- coments --}}
+{{-- <div class="row">
 
 
     <div class="col-md-12 col-lg-12 mb-4">
@@ -227,6 +229,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 @endsection
