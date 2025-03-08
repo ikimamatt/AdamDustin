@@ -53,7 +53,7 @@
         {{-- #2 --}}
         <div class="w-full py-5 flex flex-col lg:flex-row gap-5 justify-center">
             {{-- gambar --}}
-            <img src="/img/org2.png" alt="" class="w-60 sm:w-80 xl:w-96 max-h-60 xl:max-h-none mx-auto lg:mx-0">
+            <img src="{{ asset('storage/' . $introduction->image) }}" alt="" class="w-60 sm:w-80 xl:w-96 max-h-60 xl:max-h-none mx-auto lg:mx-0">
 
             <div class="flex flex-col gap-5 p-4">
                 <div class="">
