@@ -6,6 +6,7 @@ use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SignatureNewsController;
+use App\Http\Controllers\IntroductionController;
 
 Route::get('/test', function () {
     return view('admin.index');
@@ -19,6 +20,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/Berita', [HomeController::class, 'berita'])->name('berita');
 Route::get('/Profil', [HomeController::class, 'profil'])->name('profil');
+Route::get('/galery', [HomeController::class, 'galery'])->name('galery');
 
 // Rute admin (protected)
 Route::middleware('admin')->prefix('admin')->group(function () {
@@ -31,7 +33,10 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     // })->name('admin.new');
     // Route::resource('jumbotron', JumbotronController::class);
     Route::resource('news', NewsController::class);
+    Route::resource('introduction', IntroductionController::class);
+    Route::get('/introduction', [IntroductionController::class, 'index'])->name('introduction.index');
     Route::resource('signaturenews', SignatureNewsController::class);
+    Route::get('/introduction', [IntroductionController::class, 'index'])->name('introduction');
     Route::post('/news/feature', [SignatureNewsController::class, 'featureNews'])->name('news.featureNews');
     Route::post('news/feature', [SignatureNewsController::class, 'featureNews'])->name('news.featureNews');
     Route::put('signaturenews/{news}/edit', [SignatureNewsController::class, 'update'])->name('signaturenews.update');

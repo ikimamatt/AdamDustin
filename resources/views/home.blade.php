@@ -58,9 +58,8 @@
             <div class="flex flex-col gap-5 p-4">
                 <div class="">
                     <p class="text-sm italic text-justify">MENGENAL Adam DUSTIN BHAKTI...</p>
-                    <p class="text-lg sm:text-xl font-bold text-justify">Memulai Pekerjaan Baru di</p>
-                    <p class="text-lg sm:text-xl font-bold text-justify">Lexa-Pearce Indonesia</p>
-                    <p class="text-sm font-thin mb-4 sm:mb-6 xl:mb-10 max-w-full sm:max-w-96 text-justify">Adam Dustin Bhakti dikenal sebagai tokoh inspiratif muda Kalimantan Timur yang telah sukses membangun bisnis berkelanjutan hingga tingkat nasional dan berperan aktif dalam mendorong pertumbuhan ekonomi lokal.</p>
+                    <p class="title text-lg sm:text-xl font-bold text-justify">{{ $introduction->title }}</p>
+                    <p class="text-sm font-thin mb-4 sm:mb-6 xl:mb-10 max-w-full sm:max-w-96 text-justify">{{ $introduction->subtitle }}</p>
                 </div>
                 <div class="">
                     <a href="" class="bg-black px-10 text-white rounded-full p-2 text-sm">Lebih Lanjut</a>
@@ -170,81 +169,44 @@
         </div>
         {{-- #7 --}}
         <div class="p-16">
-            <p class="italic text-base xl:px-32">BERITA ADAM...</p>
-            <p class="font-semibold text-3xl xl:px-32">Ikut keseharian Adam Dustin</p>
-            <p class="bg-black w-20 mt-3 h-1 rounded-lg xl:ml-32"></p>
+    <p class="italic text-base xl:px-32">BERITA ADAM...</p>
+    <p class="font-semibold text-3xl xl:px-32">Ikut keseharian Adam Dustin</p>
+    <p class="bg-black w-20 mt-3 h-1 rounded-lg xl:ml-32"></p>
 
-            {{-- isi keseharian --}}
-            <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center mb-10">
-                <a href="" class="mt-10 relative overflow-hidden rounded-md shadow-md w-full max-w-xs mx-auto scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <div>
-                        <img src="/img/berita.png" alt="" class="w-full">
-                        <div class="absolute bg-gradient-to-t from-gray-800 opacity-80 text-white p-2 bottom-0">
-                            <p class="text-xs lg:text-base max-w-20 text-center rounded-sm px-2 p-1 text-black bg-white">
-                                Inspirasi
-                            </p>
-                            <p class="font-bold text-sm lg:text-lg">
-                                Specta ITK 2024: Adam Dustin Bhakti Berbagi Inspirasi Kewirausahaan dan Inovasi Berkelanjutan
-                            </p>
-                            <p class="font-thin text-xs lg:text-sm">
-                                Adam Dustin Bhakti (kedua dari kanan) usai mengisi materi di Specta ITK 2024. (Foto: Istimewa)
-                            </p>
-                        </div>
+    {{-- isi keseharian --}}
+    <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center mb-10">
+        <!-- Menampilkan hanya 6 berita -->
+        @foreach ($allnews->take(6) as $news)
+            <a href="{{ route('news.show', $news->id) }}" class="mt-10 relative overflow-hidden rounded-md shadow-md w-full max-w-xs mx-auto scale-100 hover:scale-105 transition ease-in-out duration-200">
+                <div class="relative">
+                    <img src="{{ asset('storage/' . $news->image) }}" alt="{{ $news->title }}" class="w-full h-60 object-cover">
+                    <!-- Layer abu-abu dengan opacity -->
+                    <div class="absolute inset-0 bg-gray-800 opacity-50"></div>
+                    <div class="absolute bg-gradient-to-t from-gray-800 opacity-80 text-white p-2 bottom-0">
+                        <p class="text-xs lg:text-base max-w-20 text-center rounded-sm px-2 p-1 text-black bg-white">
+                            {{ $news->category }}
+                        </p>
+                        <p class="font-bold text-sm lg:text-lg">
+                            {{ $news->title }}
+                        </p>
+                        <p class="font-thin text-xs lg:text-sm">
+                            {{ $news->subtitle }}
+                        </p>
                     </div>
-                </a>
+                </div>
+            </a>
+        @endforeach
+    </div>
 
-                <a href="" class="mt-10 relative overflow-hidden rounded-md shadow-md w-full max-w-xs mx-auto scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <div>
-                        <img src="/img/berita.png" alt="" class="w-full">
-                        <div class="absolute bg-gradient-to-t from-gray-800 opacity-80 text-white p-2 bottom-0">
-                            <p class="text-xs lg:text-base max-w-20 text-center rounded-sm px-2 p-1 text-black bg-white">
-                                Inspirasi
-                            </p>
-                            <p class="font-bold text-sm lg:text-lg">
-                                Specta ITK 2024: Adam Dustin Bhakti Berbagi Inspirasi Kewirausahaan dan Inovasi Berkelanjutan
-                            </p>
-                            <p class="font-thin text-xs lg:text-sm">
-                                Adam Dustin Bhakti (kedua dari kanan) usai mengisi materi di Specta ITK 2024. (Foto: Istimewa)
-                            </p>
-                        </div>
-                    </div>
-                </a>
+    <div class="text-center mt-8">
+        <a href="{{ route('news.index') }}" class="px-6 py-2 text-white bg-black hover:bg-gray-800 rounded-lg shadow-md transition-all duration-300">
+            Read More
+        </a>
+    </div>
 
-                <a href="" class="mt-10 relative overflow-hidden rounded-md shadow-md w-full max-w-xs mx-auto scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <div>
-                        <img src="/img/berita.png" alt="" class="w-full">
-                        <div class="absolute bg-gradient-to-t from-gray-800 opacity-80 text-white p-2 bottom-0">
-                            <p class="text-xs lg:text-base max-w-20 text-center rounded-sm px-2 p-1 text-black bg-white">
-                                Inspirasi
-                            </p>
-                            <p class="font-bold text-sm lg:text-lg">
-                                Specta ITK 2024: Adam Dustin Bhakti Berbagi Inspirasi Kewirausahaan dan Inovasi Berkelanjutan
-                            </p>
-                            <p class="font-thin text-xs lg:text-sm">
-                                Adam Dustin Bhakti (kedua dari kanan) usai mengisi materi di Specta ITK 2024. (Foto: Istimewa)
-                            </p>
-                        </div>
-                    </div>
-                </a>
 
-                <a href="" class="mt-10 relative overflow-hidden rounded-md shadow-md w-full max-w-xs mx-auto scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <div>
-                        <img src="/img/berita.png" alt="" class="w-full">
-                        <div class="absolute bg-gradient-to-t from-gray-800 opacity-80 text-white p-2 bottom-0">
-                            <p class="text-xs lg:text-base max-w-20 text-center rounded-sm px-2 p-1 text-black bg-white">
-                                Inspirasi
-                            </p>
-                            <p class="font-bold text-sm lg:text-lg">
-                                Specta ITK 2024: Adam Dustin Bhakti Berbagi Inspirasi Kewirausahaan dan Inovasi Berkelanjutan
-                            </p>
-                            <p class="font-thin text-xs lg:text-sm">
-                                Adam Dustin Bhakti (kedua dari kanan) usai mengisi materi di Specta ITK 2024. (Foto: Istimewa)
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
         </div>
+
 
 
         {{-- #8 --}}
