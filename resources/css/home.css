@@ -1,0 +1,6 @@
+.text-wrap { 
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 2px; /* Tentukan panjang maksimum sebelum teks di-break */
+    overflow-wrap: break-word;
+}

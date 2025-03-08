@@ -218,6 +218,14 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
+                                    <a href="{{ route('signaturenews.index') }}">
+                                        <i class="iconsminds-newspaper"></i> <span
+                                            class="d-inline-block">Signature News</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
                                     <a href="">
                                         <i class="simple-icon-user-following"></i> <span
                                             class="d-inline-block">Introduction</span>
