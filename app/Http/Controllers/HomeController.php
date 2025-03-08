@@ -18,13 +18,6 @@ class HomeController extends Controller
     {
         return view('profil');
     }
-/*************  ✨ Codeium Command ⭐  *************/
-    /**
-     * Galery page
-     *
-     * @return \Illuminate\Contracts\View\View
-     */
-/******  8eb58f62-8d9a-4b5d-8248-882842af7014  *******/
     public function galery()
     {
         return view('galery');
