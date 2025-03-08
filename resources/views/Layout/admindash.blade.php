@@ -226,7 +226,7 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="">
+                                    <a href="{{ route('introduction') }}">
                                         <i class="simple-icon-user-following"></i> <span
                                             class="d-inline-block">Introduction</span>
                                     </a>
