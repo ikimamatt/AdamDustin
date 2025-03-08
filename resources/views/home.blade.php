@@ -169,6 +169,7 @@
         </div>
         {{-- #7 --}}
         <div class="p-16">
+
     <p class="italic text-base xl:px-32">BERITA ADAM...</p>
     <p class="font-semibold text-3xl xl:px-32">Ikut keseharian Adam Dustin</p>
     <p class="bg-black w-20 mt-3 h-1 rounded-lg xl:ml-32"></p>
@@ -192,17 +193,20 @@
                         <p class="font-thin text-xs lg:text-sm">
                             {{ $news->subtitle }}
                         </p>
+
                     </div>
                 </div>
             </a>
         @endforeach
     </div>
 
+
     <div class="text-center mt-8">
         <a href="{{ route('news.index') }}" class="px-6 py-2 text-white bg-black hover:bg-gray-800 rounded-lg shadow-md transition-all duration-300">
             Read More
         </a>
     </div>
+
 
 
         </div>
