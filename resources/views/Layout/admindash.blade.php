@@ -250,7 +250,7 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="">
+                                    <a href="{{ route('video.edit', 3) }}">
                                         <i class="iconsminds-video-tripod"></i> <span
                                             class="d-inline-block">Video </span>
 
