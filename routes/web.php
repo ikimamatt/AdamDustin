@@ -12,9 +12,12 @@ Route::get('/test', function () {
     return view('admin.index');
 })->name('admin.test');
 // Rute autentikasi
-Route::get('/login-dashboard-adb', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login-dashboard-adb', [AuthController::class, 'login']);
+Route::get('/login-dashboard-adb', [AuthController::class, 'showLoginForm'])->name('login'); //login
+Route::post('/login-dashboard-adb', [AuthController::class, 'login']); //login
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
+
 
 // Rute pengunjung (tidak perlu login)
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -48,6 +51,10 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('jumbotron/{id}/edit', [JumbotronController::class, 'edit'])->name('jumbotron.edit');
     Route::put('jumbotron/{id}', [JumbotronController::class, 'update'])->name('jumbotron.update');
     Route::delete('jumbotron/{id}', [JumbotronController::class, 'destroy'])->name('jumbotron.destroy');
+
+
+
+
 });
 
 
