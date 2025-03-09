@@ -10,14 +10,14 @@
     @include('Layout.Navbar')
     
     <style>
-        .text-wrap { 
+        .text-wrap {
     white-space: normal;
     word-wrap: break-word;
     max-width: 200px; /* Tentukan panjang maksimum sebelum teks di-break */
     overflow-wrap: break-word;
 }
 
-.title { 
+.title {
     white-space: normal;
     word-wrap: break-word;
     max-width: 300px; /* Tentukan panjang maksimum sebelum teks di-break */
@@ -232,7 +232,7 @@
 
 
     <div class="text-center mt-8">
-        <a href="{{ route('news.index') }}" class="px-6 py-2 text-white bg-black hover:bg-gray-800 rounded-lg shadow-md transition-all duration-300">
+        <a href="{{ route('berita') }}" class="px-6 py-2 text-white bg-black hover:bg-gray-800 rounded-lg shadow-md transition-all duration-300">
             Read More
         </a>
     </div>
