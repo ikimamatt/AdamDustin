@@ -14,7 +14,7 @@ class SignatureNews extends Model
         'link',
         'image',
         'title',
-        '',
+        'subtitle',
         'is_featured',  // tambahkan is_featured untuk menandai berita unggulan
     ];
 }
