@@ -8,6 +8,21 @@
     @vite('resources/css/app.css')
     <title>Home</title>
     @include('Layout.Navbar')
+    <style>
+        .text-wrap { 
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 200px; /* Tentukan panjang maksimum sebelum teks di-break */
+    overflow-wrap: break-word;
+}
+
+.title { 
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 300px; /* Tentukan panjang maksimum sebelum teks di-break */
+    overflow-wrap: break-word;
+}
+    </style>
 </head>
 
 <body>
