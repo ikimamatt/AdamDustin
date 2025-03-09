@@ -51,7 +51,7 @@
                     @endforeach
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary" {{ count($news->where('is_featured', true)) >= 3 ? 'disabled' : '' }}>Update Featured</button>
+            <button type="submit" class="btn btn-primary">Update Featured</button>
         </form>
 
         <table id="datatableRows" class="data-table responsive nowrap">
