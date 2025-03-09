@@ -11,7 +11,7 @@ class SignatureNewsController extends Controller
     public function index()
     {
         $news = SignatureNews::all();
-        return view('admin.signatureNews', compact('news'));
+        return view('admin.signaturenews', compact('news'));
     }
 
     public function store(Request $request)
