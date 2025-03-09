@@ -14,5 +14,10 @@
         "postcss": "^8.5.3",
         "tailwindcss": "^3.4.17",
         "vite": "^6.0"
+    },
+    "dependencies": {
+        "build": "^0.1.4",
+        "npm": "^11.2.0",
+        "run": "^1.5.0"
     }
 }

@@ -12,8 +12,8 @@ Route::get('/test', function () {
     return view('admin.index');
 })->name('admin.test');
 // Rute autentikasi
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
+Route::get('/login-dashboard-adb', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login-dashboard-adb', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Rute pengunjung (tidak perlu login)
