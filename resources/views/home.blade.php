@@ -8,6 +8,7 @@
     @vite('resources/css/app.css')
     <title>Home</title>
     @include('Layout.Navbar')
+    
     <style>
         .text-wrap {
     white-space: normal;
@@ -143,14 +144,29 @@
 
 
         {{-- #5 --}}
-        <div class="p-16 xl:px-32 ">
-            <p class="italic text-base">VIDEO ADAM...</p>
-            <p class="font-semibold text-3xl">Inspirasi Dari Adam Dustin</p>
-            <p class="font-base my-5 text-sm max-w-80">Temukan konten video inspiratif dari Mas Sandi yang penuh dengan
-                informasi
-                dikemas dengan gaya bahasa kekinian yang tetap seru untuk ditonton.</p>
-            <a href="" class="bg-black px-10 text-white rounded-full p-2 text-sm opacity-90">Lihat Lebih
-                Lanjut</a>
+        <div class="flex flex-col md:flex-row p-16 xl:px-32">
+    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+        <!-- Ekstrak ID video dari URL dan buat link embed -->
+    @php
+        // Ekstrak ID video dari URL
+        $videoId = null;
+        if (preg_match('/(?:https?:\/\/(?:www\.)?youtu\.be\/|(?:https?:\/\/(?:www\.)?youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)))([a-zA-Z0-9_-]{11})/', $videoLink->link, $matches)) {
+            $videoId = $matches[1];
+        }
+    @endphp
+        <p class="italic text-xl md:text-2xl">VIDEO ADAM...</p> <!-- Ukuran font lebih besar di layar besar -->
+        <p class="font-semibold text-4xl md:text-5xl">Inspirasi Dari Adam Dustin</p> <!-- Ukuran font lebih besar di layar besar -->
+        <p class="font-base my-5 text-lg md:text-xl max-w-80">Temukan konten video inspiratif dari Mas Sandi yang penuh dengan
+            informasi
+            dikemas dengan gaya bahasa kekinian yang tetap seru untuk ditonton.</p> <!-- Ukuran font lebih besar di layar besar -->
+        <a href="{{ ($videoLink->link) }}" target="_blank" class="bg-black px-10 text-white rounded-full p-2 text-sm opacity-90">Lihat Lebih
+            Lanjut</a>
+    </div>
+    <div class="w-full md:w-1/2">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ $videoId }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
 
         </div>
         {{-- $6 --}}

@@ -7,6 +7,7 @@ use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SignatureNewsController;
 use App\Http\Controllers\IntroductionController;
+use App\Http\Controllers\videosController;
 
 Route::get('/test', function () {
     return view('admin.index');
@@ -51,6 +52,10 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('jumbotron/{id}/edit', [JumbotronController::class, 'edit'])->name('jumbotron.edit');
     Route::put('jumbotron/{id}', [JumbotronController::class, 'update'])->name('jumbotron.update');
     Route::delete('jumbotron/{id}', [JumbotronController::class, 'destroy'])->name('jumbotron.destroy');
+
+    Route::get('/video', [videosController::class, 'index'])->name('video.index');
+    Route::get('/admin/video/{id}/edit', [videosController::class, 'edit'])->name('video.edit'); // Menampilkan halaman edit
+    Route::put('/admin/video/{id}', [videosController::class, 'update'])->name('video.update'); // Menangani update
 
 
 
