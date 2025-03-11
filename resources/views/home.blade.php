@@ -10,19 +10,80 @@
     @include('Layout.Navbar')
     
     <style>
-        .text-wrap { 
+        .text-wrap {
     white-space: normal;
     word-wrap: break-word;
     max-width: 200px; /* Tentukan panjang maksimum sebelum teks di-break */
     overflow-wrap: break-word;
 }
 
-.title { 
+.title {
     white-space: normal;
     word-wrap: break-word;
     max-width: 300px; /* Tentukan panjang maksimum sebelum teks di-break */
     overflow-wrap: break-word;
 }
+        .custom-container {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem; /* Set padding atas/bawah */
+            margin: 0 auto; /* Center the container */
+            max-width: 1000px; /* Set maximum width for the container */
+        }
+        @media (min-width: 768px) {
+            .custom-container {
+                flex-direction: row; /* Change to row on medium screens */
+            }
+        }
+        .custom-left-column {
+            width: 100%;
+            margin-bottom: 2rem; /* Margin bottom for spacing */
+        }
+        @media (min-width: 768px) {
+            .custom-left-column {
+                width: 50%; /* Set width for medium screens */
+                margin-bottom: 0; /* Remove margin bottom */
+            }
+        }
+        .custom-right-column {
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            .custom-right-column {
+                width: 50%; /* Set width for medium screens */
+            }
+        }
+        .custom-italic {
+            font-style: italic;
+            font-size: 1.25rem; /* Equivalent to text-xl */
+        }
+        .custom-font-semibold {
+            font-weight: 600; /* Equivalent to font-semibold */
+            font-size: 2.5rem;
+            word-wrap: break-word;
+            max-width: 450px;/* Equivalent to text-4xl */
+        }
+        .custom-font-base {
+            font-size: 1rem; /* Base font size */
+            margin: 1.25rem 0;
+            word-wrap: break-word;
+            max-width: 300px;/* Margin for spacing */
+        }
+        .custom-link-button {
+            background-color: black;
+            color: white;
+            padding: 0.5rem 2.5rem; /* Padding for button */
+            border-radius: 9999px; /* Fully rounded */
+            font-size: 0.875rem; /* Equivalent to text-sm */
+            opacity: 0.9;
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Ensure button behaves like a block */
+        }
+        iframe {
+            width: 100%;
+            height: 315px; /* Fixed height for iframe */
+            border: none; /* Remove border */
+        }
     </style>
 </head>
 
@@ -144,28 +205,24 @@
 
 
         {{-- #5 --}}
-        <div class="flex flex-col md:flex-row p-16 xl:px-32">
-    <div class="w-full md:w-1/2 mb-8 md:mb-0">
-        <!-- Ekstrak ID video dari URL dan buat link embed -->
-    @php
-        // Ekstrak ID video dari URL
-        $videoId = null;
-        if (preg_match('/(?:https?:\/\/(?:www\.)?youtu\.be\/|(?:https?:\/\/(?:www\.)?youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)))([a-zA-Z0-9_-]{11})/', $videoLink->link, $matches)) {
-            $videoId = $matches[1];
-        }
-    @endphp
-        <p class="italic text-xl md:text-2xl">VIDEO ADAM...</p> <!-- Ukuran font lebih besar di layar besar -->
-        <p class="font-semibold text-4xl md:text-5xl">Inspirasi Dari Adam Dustin</p> <!-- Ukuran font lebih besar di layar besar -->
-        <p class="font-base my-5 text-lg md:text-xl max-w-80">Temukan konten video inspiratif dari Mas Sandi yang penuh dengan
-            informasi
-            dikemas dengan gaya bahasa kekinian yang tetap seru untuk ditonton.</p> <!-- Ukuran font lebih besar di layar besar -->
-        <a href="{{ ($videoLink->link) }}" target="_blank" class="bg-black px-10 text-white rounded-full p-2 text-sm opacity-90">Lihat Lebih
-            Lanjut</a>
+    <div class="custom-container">
+        <div class="custom-left-column">
+            @php
+                // Ekstrak ID video dari URL
+                $videoId = null;
+                if (preg_match('/(?:https?:\/\/(?:www\.)?youtu\.be\/|(?:https?:\/\/(?:www\.)?youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)))([a-zA-Z0-9_-]{11})/', $videoLink->link, $matches)) {
+                    $videoId = $matches[1];
+                }
+            @endphp
+            <p class="custom-italic">VIDEO ADAM...</p>
+            <p class="custom-font-semibold">Inspirasi Dari Adam Dustin</p>
+            <p class="custom-font-base">Temukan konten video inspiratif dari Mas Sandi yang penuh dengan informasi dikemas dengan gaya bahasa kekinian yang tetap seru untuk ditonton.</p>
+            <a href="{{ ($videoLink->link) }}" target="_blank" class="custom-link-button">Lihat Lebih Lanjut</a>
+        </div>
+        <div class="custom-right-column">
+            <iframe src="https://www.youtube.com/embed/{{ $videoId }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
-    <div class="w-full md:w-1/2">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ $videoId }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-</div>
 
 
         </div>
@@ -232,7 +289,7 @@
 
 
     <div class="text-center mt-8">
-        <a href="{{ route('news.index') }}" class="px-6 py-2 text-white bg-black hover:bg-gray-800 rounded-lg shadow-md transition-all duration-300">
+        <a href="{{ route('berita') }}" class="px-6 py-2 text-white bg-black hover:bg-gray-800 rounded-lg shadow-md transition-all duration-300">
             Read More
         </a>
     </div>
