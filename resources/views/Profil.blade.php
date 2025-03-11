@@ -9,6 +9,11 @@
     <title>Profil</title>
 </head>
 
+
+
+
+
+
 <body>
     @include('Layout.Navbar')
     <div class=" w-full">

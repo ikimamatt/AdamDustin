@@ -11,7 +11,7 @@ class AdminMiddleware
     {
         // Cek jika user belum login dan mencoba mengakses halaman admin
         if (!auth()->check() && $request->is('admin/*')) {
-            return redirect('/login');
+            return redirect('/login-dashboard-adb');
         }
 
         // Jika sudah login dan mencoba akses login page
