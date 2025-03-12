@@ -202,6 +202,14 @@
                         <div id="collapseAuthorization" class="collapse show">
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
+                                    <a href="{{ route('logo.index') }}">
+                                        <i class="iconsminds-id-card"></i> <span
+                                            class="d-inline-block">Logo</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
                                     <a href="{{ route('jumbotron.index') }}">
                                         <i class="iconsminds-monitor"></i> <span
                                             class="d-inline-block">jumbotron</span>

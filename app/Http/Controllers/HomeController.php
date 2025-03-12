@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Jumbotron; // Pastikan Anda sudah mengimpor model Jumbotron
 use App\Models\SignatureNews;
 use App\Models\Introduction;
+use App\Models\Logo;
 use App\Models\News;
 use App\Models\Video;
 use Illuminate\Http\Request;
@@ -25,8 +26,10 @@ class HomeController extends Controller
 
     $videoLink = Video::first();
 
+    $logo = Logo::first();
+
     // Mengirimkan data jumbotron dan berita fitur ke tampilan home
-    return view('home', compact('jumbotron', 'featuredNews','allnews', 'introduction', 'videoLink'));
+    return view('home', compact('jumbotron', 'featuredNews','allnews', 'introduction', 'videoLink', 'logo'));
     }
 
     public function berita()

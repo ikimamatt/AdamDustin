@@ -11,7 +11,7 @@
     <nav class="w-full z-30 fixed bg-black drop-shadow-xl shadow-white">
         <div class="px-8 py-6 flex justify-between items-center">
           <!-- Logo / Judul -->
-          <p class="font-bold text-2xl italic text-white">Logo</p>
+          <img src="{{ asset('storage/' . $logo->profile_image) }}" alt="Profile Image" width="100" class="img-thumbnail">
 
           <!-- Menu Desktop -->
           <div class="hidden sm:flex space-x-8 items-center text-white">
