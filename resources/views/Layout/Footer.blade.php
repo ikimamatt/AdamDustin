@@ -14,7 +14,9 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
             <!-- Logo Section -->
             <div class="flex flex-col items-center md:items-start">
-                <p class="italic text-2xl font-bold mb-4 text-center md:text-left">LOGO</p>
+                {{-- <p class="italic text-2xl font-bold mb-4 text-center md:text-left">LOGO</p> --}}
+                <img src="{{ asset('storage/' . $logo->profile_image) }}" alt="Profile Image" width="100" class="img-thumbnail mb-4">
+
                 <p class="font-thin text-xs text-center md:text-left">Your slogan or description here</p>
             </div>
 

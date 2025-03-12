@@ -7,6 +7,7 @@ use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SignatureNewsController;
 use App\Http\Controllers\IntroductionController;
+use App\Http\Controllers\LogoController;
 use App\Http\Controllers\videosController;
 
 Route::get('/test', function () {
@@ -56,6 +57,11 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/video', [videosController::class, 'index'])->name('video.index');
     Route::get('/admin/video/{id}/edit', [videosController::class, 'edit'])->name('video.edit'); // Menampilkan halaman edit
     Route::put('/admin/video/{id}', [videosController::class, 'update'])->name('video.update'); // Menangani update
+
+    Route::get('/logo', [LogoController::class, 'index'])->name('logo.index');
+    Route::put('/logo', [LogoController::class, 'update'])->name('logo.update');
+
+
 
 
 
