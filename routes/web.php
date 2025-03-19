@@ -9,6 +9,7 @@ use App\Http\Controllers\SignatureNewsController;
 use App\Http\Controllers\IntroductionController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\videosController;
+use App\Http\Controllers\QuoteController;
 
 Route::get('/test', function () {
     return view('admin.index');
@@ -53,7 +54,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('jumbotron/{id}/edit', [JumbotronController::class, 'edit'])->name('jumbotron.edit');
     Route::put('jumbotron/{id}', [JumbotronController::class, 'update'])->name('jumbotron.update');
     Route::delete('jumbotron/{id}', [JumbotronController::class, 'destroy'])->name('jumbotron.destroy');
-
+    Route::get('/quote', [QuoteController::class, 'index'])->name('quote.index');
     Route::get('/video', [videosController::class, 'index'])->name('video.index');
     Route::get('/admin/video/{id}/edit', [videosController::class, 'edit'])->name('video.edit'); // Menampilkan halaman edit
     Route::put('/admin/video/{id}', [videosController::class, 'update'])->name('video.update'); // Menangani update
@@ -61,6 +62,9 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/logo', [LogoController::class, 'index'])->name('logo.index');
     Route::put('/logo', [LogoController::class, 'update'])->name('logo.update');
 
+    Route::get('/quote/{id}/edit', [QuoteController::class, 'edit'])->name('quote.edit');
+    Route::put('/quote/{id}', [QuoteController::class, 'update'])->name('quote.update');
+    Route::put('/admin/quote-detail/update', [QuoteController::class, 'updateQuoteDetail'])->name('admin.quoteDetail.updateQuoteDetail');
 
 
 

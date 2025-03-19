@@ -8,6 +8,8 @@ use App\Models\Introduction;
 use App\Models\Logo;
 use App\Models\News;
 use App\Models\Video;
+use App\Models\Quote;
+use App\Models\MainQuote;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -22,6 +24,10 @@ class HomeController extends Controller
 
     $allnews = News::all();
 
+    $quote = Quote::all();
+
+    $mainquotes = MainQuote::first();
+
     $introduction = Introduction::first();
 
     $videoLink = Video::first();
@@ -29,7 +35,7 @@ class HomeController extends Controller
     $logo = Logo::first();
 
     // Mengirimkan data jumbotron dan berita fitur ke tampilan home
-    return view('home', compact('jumbotron', 'featuredNews','allnews', 'introduction', 'videoLink', 'logo'));
+    return view('home', compact('jumbotron', 'featuredNews','allnews','quote','mainquotes', 'introduction', 'videoLink', 'logo'));
     }
 
     public function berita()
