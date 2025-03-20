@@ -171,35 +171,17 @@
         {{-- #4 --}}
         <div class="bg-black w-full text-white p-16 xl:px-32 my-10">
             <p class="font-thin italic">GERAKAN ADAM...</p>
-            <p class="text-3xl font-semibold max-w-xl">"Sukses itu gaada rahasianya. Sukses itu kombinasi persiapan yang matang, kerja keras, dan belajar dari kegagalan"</p>
-            <p class="mt-10">Dengan semangat 4As (kerja keras, kerja cerdas, kerja tuntas, kerja ikhlas) Sandi Uno </p>
-
+            <p class="text-3xl font-semibold max-w-xl">{{ $mainquotes->text }}</p>
             {{-- isi gerakan --}}
             <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+            @foreach($quote as $items)
                 <div class="w-full">
-                    <p class="font-semibold text-lg pb-4">Penciptaan Lapangan Kerja</p>
+                    <p class="font-semibold text-lg pb-4">{{ $items->title }}</p>
                     <p class="font-light">
-                        Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai industri untuk memajukan ekonomi masyarakat Indonesia.
+                    {{ $items->subtitle }}
                     </p>
                 </div>
-                <div class="w-full">
-                    <p class="font-semibold text-lg pb-4">Perluasan Pertumbuhan UMKM</p>
-                    <p class="font-light">
-                        Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai industri untuk memajukan ekonomi masyarakat Indonesia.
-                    </p>
-                </div>
-                <div class="w-full">
-                    <p class="font-semibold text-lg pb-4">Stabilitas Ekonomi, Harga Terjangkau</p>
-                    <p class="font-light">
-                        Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai industri untuk memajukan ekonomi masyarakat Indonesia.
-                    </p>
-                </div>
-                <div class="w-full">
-                    <p class="font-semibold text-lg pb-4">Inovasi Ekonomi Berkelanjutan</p>
-                    <p class="font-light">
-                        Mas Sandi secara aktif mendorong terciptanya lapangan kerja di berbagai industri untuk memajukan ekonomi masyarakat Indonesia.
-                    </p>
-                </div>
+                @endforeach
             </div>
         </div>
 

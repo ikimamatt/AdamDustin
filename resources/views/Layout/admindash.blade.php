@@ -234,6 +234,14 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
+                                    <a href="{{ route('quote.index') }}">
+                                        <i class="iconsminds-newspaper"></i> <span
+                                            class="d-inline-block">Quotes</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
                                     <a href="{{ route('introduction') }}">
                                         <i class="simple-icon-user-following"></i> <span
                                             class="d-inline-block">Introduction</span>
