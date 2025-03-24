@@ -21,55 +21,60 @@ class SignatureNewsController extends Controller
             'subtitle' => 'required|string|max:255',
             'link' => 'required|url',  // Validasi link
             'image' => 'required|image',
+            'category' => 'required|string|max:255',  // Menambahkan validasi kategori
         ]);
-
+    
         $imagePath = $request->file('image')->store('news', 'public');
-
+    
         SignatureNews::create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
-            'link' => $request->link,  // Menyimpan link
+            'link' => $request->link,
             'image' => $imagePath,
+            'category' => $request->category,  // Menyimpan kategori
             'is_featured' => false,  // Default to not featured
         ]);
-
+    
         return redirect()->route('signaturenews.index')->with('success', 'News created successfully.');
     }
-
+    
     public function update(Request $request, SignatureNews $news)
-{
-    // Validation
-    $validated = $request->validate([
-        'title' => 'required|string|max:255',
-        'subtitle' => 'required|string|max:255',
-        'link' => 'nullable|url',  // Validate the link if provided
-        'image' => 'nullable|image',  // Image is optional for updates
-    ]);
-
-    // Check if an image is uploaded, and if so, store it
-    if ($request->hasFile('image')) {
-        // Delete the old image if a new one is uploaded
-        if ($news->image) {
-            // Delete the old image from storage
-            Storage::delete('public/' . $news->image);
+    {
+        // Validation
+        $validated = $request->validate([
+            'title' => 'required|string|max:255',
+            'subtitle' => 'required|string|max:255',
+            'link' => 'nullable|url',  // Validate the link if provided
+            'image' => 'nullable|image',  // Image is optional for updates
+            'category' => 'required|string|max:255',  // Validasi kategori
+        ]);
+    
+        // Check if an image is uploaded, and if so, store it
+        if ($request->hasFile('image')) {
+            // Delete the old image if a new one is uploaded
+            if ($news->image) {
+                // Delete the old image from storage
+                Storage::delete('public/' . $news->image);
+            }
+    
+            // Store the new image
+            $imagePath = $request->file('image')->store('news', 'public');
+            $news->image = $imagePath;
         }
-
-        // Store the new image
-        $imagePath = $request->file('image')->store('news', 'public');
-        $news->image = $imagePath;
+    
+        // Update the fields
+        $news->title = $request->title;
+        $news->subtitle = $request->subtitle;
+        $news->link = $request->link;
+        $news->category = $request->category;  // Update category
+    
+        // Save the updated news record
+        $news->save();
+    
+        // Redirect back with success message
+        return redirect()->route('signaturenews.index')->with('success', 'News updated successfully.');
     }
-
-    // Update the fields
-    $news->title = $request->title;
-    $news->subtitle = $request->subtitle;
-    $news->link = $request->link;
-
-    // Save the updated news record
-    $news->save();
-
-    // Redirect back with success message
-    return redirect()->route('signaturenews.index')->with('success', 'News updated successfully.');
-}
+    
 
 
 

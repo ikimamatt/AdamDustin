@@ -22,7 +22,7 @@ class HomeController extends Controller
     // Mengambil data berita fitur
     $featuredNews = SignatureNews::where('is_featured', 1)->get();
 
-    $allnews = News::all();
+    $allnews = SignatureNews::all();
 
     $quote = Quote::all();
 
@@ -40,7 +40,10 @@ class HomeController extends Controller
 
     public function berita()
     {
-        return view('berita');
+        $allnews = SignatureNews::all();
+
+        $logo = Logo::first();
+        return view('berita', compact('logo', 'allnews'));
     }
 
     public function profil()

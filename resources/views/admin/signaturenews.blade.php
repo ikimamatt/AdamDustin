@@ -104,6 +104,7 @@
 
                 <!-- Edit News Modal -->
                 <!-- Edit News Modal -->
+<!-- Edit News Modal -->
 <div class="modal fade" id="editNewsModal{{ $item->id }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -135,6 +136,12 @@
                         <input type="url" class="form-control" name="link" id="link" value="{{ old('link', $item->link) }}" required>
                     </div>
 
+                    <!-- Category Input -->
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <input type="text" class="form-control" name="category" id="category" value="{{ old('category', $item->category) }}" required>
+                    </div>
+
                     <!-- Image Input (Optional) -->
                     <div class="form-group">
                         <label for="image">Image</label>
@@ -144,10 +151,7 @@
                         @endif
                     </div>
 
-                    <!-- Featured Checkbox -->
-                    
                 </div>
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Save Changes</button>
@@ -164,6 +168,7 @@
     </div>
 </div>
 
+<!-- Create News Modal -->
 <!-- Create News Modal -->
 <div class="modal fade" id="createNewsModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -195,16 +200,19 @@
                         <input type="url" class="form-control" name="link" id="link" required>
                     </div>
 
+                    <!-- Category Input -->
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <input type="text" class="form-control" name="category" id="category" required>
+                    </div>
+
                     <!-- Image Input -->
                     <div class="form-group">
                         <label for="image">Image</label>
                         <input type="file" class="form-control" name="image" id="image" required>
                     </div>
 
-                    <!-- Featured Checkbox -->
-                    
                 </div>
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Create</button>
@@ -213,7 +221,6 @@
         </div>
     </div>
 </div>
-
 <script>
     document.getElementById('searchDatatable').addEventListener('input', function() {
         let filter = this.value.toLowerCase(); // Get the input value and convert to lowercase
