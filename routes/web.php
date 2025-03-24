@@ -67,7 +67,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::put('/admin/quote-detail/update', [QuoteController::class, 'updateQuoteDetail'])->name('admin.quoteDetail.updateQuoteDetail');
 
 
-
+    
 
 
 });

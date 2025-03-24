@@ -48,10 +48,12 @@ class HomeController extends Controller
 
     public function profil()
     {
-        return view('profil');
+        $logo = Logo::first();
+        return view('profil', compact('logo'));
     }
     public function galery()
     {
-        return view('galery');
+        $logo = Logo::first();
+        return view('galery', compact('logo'));
     }
 }
