@@ -22,6 +22,12 @@
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap-datepicker3.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/component-custom-switch.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+
+
 
 
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap-float-label.min.css') }}" />
@@ -275,7 +281,7 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="">
+                                    <a href="{{route('gallery.index') }}">
                                         <i class="iconsminds-video-tripod"></i> <span
                                             class="d-inline-block">Gallery </span>
 
@@ -411,6 +417,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     {{-- <script>
     if (!sessionStorage.getItem('loggedIn')) {

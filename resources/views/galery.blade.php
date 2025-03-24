@@ -56,22 +56,14 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
         <!-- Gallery Image 1 -->
-        <div class="relative group overflow-hidden rounded-md shadow-md aspect-[1/1] cursor-pointer" onclick="openImage('/img/galery1.jpeg')">
-            <img src="/img/galery1.jpeg" alt="" class="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-110">
+         
+            @foreach($galleries as $gallery)
+        <div class="relative group overflow-hidden rounded-md shadow-md aspect-[1/1] cursor-pointer" onclick="openImage('{{ asset('storage/' . $gallery->image) }}')">
+            <img src="{{ asset('storage/' . $gallery->image) }}" alt="" class="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black opacity-50"></div>
         </div>
+        @endforeach
 
-        <!-- Gallery Image 2 -->
-        <div class="relative group overflow-hidden rounded-md shadow-md aspect-[1/1] cursor-pointer" onclick="openImage('/img/galery2.jpeg')">
-            <img src="/img/galery2.jpeg" alt="" class="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black opacity-50"></div>
-        </div>
-
-        <!-- Gallery Image 3 -->
-        <div class="relative group overflow-hidden rounded-md shadow-md aspect-[1/1] cursor-pointer" onclick="openImage('/img/galery3.jpg')">
-            <img src="/img/galery3.jpg" alt="" class="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black opacity-50"></div>
-        </div>
     </div>
 </div>
 

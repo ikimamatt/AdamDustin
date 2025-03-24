@@ -10,7 +10,9 @@ use App\Models\News;
 use App\Models\Video;
 use App\Models\Quote;
 use App\Models\MainQuote;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
+
 
 class HomeController extends Controller
 {
@@ -54,6 +56,8 @@ class HomeController extends Controller
     public function galery()
     {
         $logo = Logo::first();
-        return view('galery', compact('logo'));
+        $galleries = Gallery::all();
+
+        return view('galery', compact('logo', 'galleries'));
     }
 }
