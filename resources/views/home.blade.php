@@ -231,7 +231,7 @@
                         <p
                             class="text-center text-white text-xs sm:text-base max-w-24 sm:max-w-36 mx-auto font font-semibold z-10">
                             Dan Banyak Momen Lainnya</p>
-                        <a href="/"
+                        <a href="{{ route('galery.index') }}"
                             class="bg-white text-center mx-auto max-w-48 font-semibold text-black rounded-full px-4 p-1 text-xs sm:text-base z-20">Lebih
                             Lanjut</a>
                     </div>
