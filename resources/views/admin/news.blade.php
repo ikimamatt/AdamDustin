@@ -61,6 +61,7 @@
                     <th>Subtitle</th>
                     <th>Category</th>
                     <th>Image</th>
+                    <th>Link</th> <!-- Added column for Link -->
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -79,9 +80,15 @@
                     <td>
                         @if($item->image)
                             <img src="{{ asset('storage/' . $item->image) }}" alt="News Image" style="max-width: 50px;">
-
                         @else
                             <p>No Image</p>
+                        @endif
+                    </td>
+                    <td>
+                        @if($item->link)
+                            <a href="{{ $item->link }}" target="_blank">{{ $item->link }}</a>
+                        @else
+                            <p>No Link</p>
                         @endif
                     </td>
                     <td>
@@ -121,6 +128,10 @@
                                     <div class="form-group">
                                         <label>Category</label>
                                         <input type="text" class="form-control" name="category" value="{{ $item->category }}" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Link</label> <!-- Added Link Input -->
+                                        <input type="url" class="form-control" name="link" value="{{ $item->link }}">
                                     </div>
                                     <div class="form-group">
                                         <label>Image</label>
@@ -169,6 +180,10 @@
                     <div class="form-group">
                         <label>Category</label>
                         <input type="text" class="form-control" name="category" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Link</label> <!-- Added Link Input -->
+                        <input type="url" class="form-control" name="link">
                     </div>
                     <div class="form-group">
                         <label>Image</label>

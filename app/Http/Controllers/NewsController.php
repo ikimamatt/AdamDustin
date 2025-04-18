@@ -21,6 +21,7 @@ class NewsController extends Controller
             'subtitle' => 'required|max:255',
             'category' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'link' => 'nullable|url', // Menambahkan validasi untuk link (opsional)
         ]);
 
         // Menyimpan gambar
@@ -32,6 +33,7 @@ class NewsController extends Controller
             'subtitle' => $request->subtitle,
             'category' => $request->category,
             'image' => $imagePath, // Menyimpan path gambar
+            'link' => $request->link, // Menyimpan link jika ada
         ]);
 
         return redirect()->back()->with('success', 'News created successfully.');
@@ -44,9 +46,10 @@ class NewsController extends Controller
             'subtitle' => 'required|max:255',
             'category' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'link' => 'nullable|url', // Menambahkan validasi untuk link (opsional)
         ]);
 
-        $data = $request->only(['title', 'subtitle', 'category']);
+        $data = $request->only(['title', 'subtitle', 'category', 'link']); // Menambahkan link ke dalam data yang akan diupdate
 
         // Menyimpan gambar baru jika ada
         if ($request->hasFile('image')) {

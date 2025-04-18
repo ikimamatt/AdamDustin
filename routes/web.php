@@ -10,6 +10,7 @@ use App\Http\Controllers\IntroductionController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\videosController;
 use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\GalleryController;
 
 Route::get('/test', function () {
     return view('admin.index');
@@ -66,7 +67,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::put('/quote/{id}', [QuoteController::class, 'update'])->name('quote.update');
     Route::put('/admin/quote-detail/update', [QuoteController::class, 'updateQuoteDetail'])->name('admin.quoteDetail.updateQuoteDetail');
 
-
+    Route::resource('gallery', GalleryController::class);
 
 
 
