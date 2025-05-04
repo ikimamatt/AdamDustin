@@ -45,13 +45,13 @@ class HomeController extends Controller
         $allnews = SignatureNews::all();
 
         $logo = Logo::first();
-        return view('berita', compact('logo', 'allnews'));
+        return view('Berita', compact('logo', 'allnews'));
     }
 
     public function profil()
     {
         $logo = Logo::first();
-        return view('profil', compact('logo'));
+        return view('Profil', compact('logo'));
     }
     public function galery()
     {
