@@ -11,6 +11,7 @@ use App\Http\Controllers\LogoController;
 use App\Http\Controllers\videosController;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\SocialMediaController;
 
 Route::get('/test', function () {
     return view('admin.index');
@@ -31,6 +32,7 @@ Route::get('/galery', [HomeController::class, 'galery'])->name('galery');
 
 // Rute admin (protected)
 Route::middleware('admin')->prefix('admin')->group(function () {
+    Route::resource('social-media', SocialMediaController::class)->only(['index', 'store', 'destroy']);
     Route::get('/dashboard', function () {
         return view('admin.index');
     })->name('dashboard');

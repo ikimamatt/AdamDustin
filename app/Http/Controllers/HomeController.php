@@ -12,6 +12,7 @@ use App\Models\Quote;
 use App\Models\MainQuote;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use App\Models\SocialMedia;
 
 
 class HomeController extends Controller
@@ -36,28 +37,36 @@ class HomeController extends Controller
 
     $logo = Logo::first();
 
+    $socialMedia = SocialMedia::first() ?? new SocialMedia();
+
     // Mengirimkan data jumbotron dan berita fitur ke tampilan home
-    return view('home', compact('jumbotron', 'featuredNews','allnews','quote','mainquotes', 'introduction', 'videoLink', 'logo'));
+    return view('home', compact('jumbotron', 'featuredNews','allnews','quote','mainquotes', 'introduction', 'videoLink', 'logo', 'socialMedia'));
     }
 
     public function berita()
     {
         $allnews = SignatureNews::all();
+    $socialMedia = SocialMedia::first() ?? new SocialMedia();
+
 
         $logo = Logo::first();
-        return view('Berita', compact('logo', 'allnews'));
+        return view('Berita', compact('logo', 'allnews', 'socialMedia'));
     }
 
     public function profil()
     {
         $logo = Logo::first();
-        return view('Profil', compact('logo'));
+    $socialMedia = SocialMedia::first() ?? new SocialMedia();
+
+        return view('Profil', compact('logo', 'socialMedia'));
     }
     public function galery()
     {
         $logo = Logo::first();
         $galleries = Gallery::all();
+    $socialMedia = SocialMedia::first() ?? new SocialMedia();
 
-        return view('galery', compact('logo', 'galleries'));
+
+        return view('galery', compact('logo', 'galleries', 'socialMedia'));
     }
 }

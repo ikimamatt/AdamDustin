@@ -43,9 +43,9 @@
                     <p class="text-sm font-thin mt-1">Visinya bukan sekadar kaya raya, tetapi bermanfaat bagi banyak orang. Dengan mengubah pola pikir ini, ia mampu mengelola keuangan secara bijak, mendukung keluarga, dan komunitasnya.</p>
                 </div>
             </div>
-            <div class="text-center mt-4">
+            {{-- <div class="text-center mt-4">
                 <a href="" class="bg-black px-10 text-white rounded-full p-2 text-sm">Lebih Lanjut</a>
-            </div>
+            </div> --}}
         </div>
 
         <div class="w-full py-28 px-4 lg:px-16 xl:px-32 flex flex-col gap-4 justify-center">

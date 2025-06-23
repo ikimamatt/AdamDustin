@@ -256,7 +256,7 @@
                             </ul>
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="">
+                                    <a href="{{ route('social-media.index') }}">
                                         <i class="iconsminds-instagram"></i> <span
                                             class="d-inline-block">Social Media</span>
                                     </a>

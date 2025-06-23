@@ -8,7 +8,7 @@
     @vite('resources/css/app.css')
     <title>Home</title>
     @include('Layout.Navbar')
-    
+
     <style>
         .text-wrap {
     white-space: normal;
@@ -151,19 +151,19 @@
         <div class="w-full py-5 px-4 lg:px-16 xl:px-32 flex flex-col gap-4 justify-center">
             <p class="text-xl font-bold text-center lg:text-left">Terhubung dengan Adam Dustin</p>
             <div class="flex justify-center gap-4">
-                <a href="" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
+                <a href="{{ $socialMedia->facebook }}" target="_blank" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
                     <img src="/img/sosmed.png" class="w-32 sm:w-40 lg:w-[219px] xl:w-[313px]" alt="">
                     <p class="absolute bottom-2 left-2 font-bold text-white">Facebook</p>
                 </a>
-                <a href="" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
+                <a href="{{ $socialMedia->instagram }}" target="_blank" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
                     <img src="/img/sosmed.png" class="w-32 sm:w-40 lg:w-[219px] xl:w-[313px]" alt="">
                     <p class="absolute bottom-2 left-2 font-bold text-white">Instagram</p>
                 </a>
-                <a href="" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
+                <a href="{{ $socialMedia->tiktok }}" target="_blank" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
                     <img src="/img/sosmed.png" class="w-32 sm:w-40 lg:w-[219px] xl:w-[313px]" alt="">
                     <p class="absolute bottom-2 left-2 font-bold text-white">Tiktok</p>
                 </a>
-                <a href="" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
+                <a href="{{ $socialMedia->twitter }}" target="_blank" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
                     <img src="/img/sosmed.png" class="w-32 sm:w-40 lg:w-[219px] xl:w-[313px]" alt="">
                     <p class="absolute bottom-2 left-2 font-bold text-white">Twitter</p>
                 </a>

@@ -17,25 +17,16 @@
                 {{-- <p class="italic text-2xl font-bold mb-4 text-center md:text-left">LOGO</p> --}}
                 <img src="{{ asset('storage/' . $logo->profile_image) }}" alt="Profile Image" width="100" class="img-thumbnail mb-4">
 
-                <p class="font-thin text-xs text-center md:text-left">Your slogan or description here</p>
+                <p class="font-thin text-xs text-center md:text-left">Adam Dustin Bhakti</p>
             </div>
 
             <!-- Social Media Section -->
             <div class="flex flex-col items-center md:items-start">
                 <p class="font-semibold text-lg underline underline-offset-8 mb-4">Social</p>
-                <div class="flex gap-6 mb-4">
-                    <a href="" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
-                        <i class="fab fa-facebook-f text-xl"></i>
-                    </a>
-                    <a href="" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
-                        <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                    <a href="" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
-                        <i class="fab fa-tiktok text-xl"></i>
-                    </a>
-                    <a href="" class="text-gray-400 hover:text-gray-200 transition-colors duration-200">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
+               <div class="flex flex-col font-thin text-sm gap-4">
+                    <a href="{{ $socialMedia->instagram }}" target="_blank" class="hover:text-gray-400">Instagram</a>
+                    <a href="{{ $socialMedia->facebook }}" target="_blank" class="hover:text-gray-400">Facebook</a>
+                    <a href="{{ $socialMedia->tiktok }}" target="_blank" class="hover:text-gray-400">Tiktok</a>
                 </div>
             </div>
 
@@ -44,8 +35,8 @@
                 <p class="font-semibold text-lg underline underline-offset-8 mb-4">Profil</p>
                 <div class="flex flex-col font-thin text-sm gap-4">
                     <a href="" class="hover:text-gray-400">Profil</a>
-                    <a href="" class="hover:text-gray-400">Kegiatan</a>
-                    <a href="" class="hover:text-gray-400">xxx</a>
+                    {{-- <a href="" class="hover:text-gray-400">Berita</a>
+                    <a href="" class="hover:text-gray-400">Dokumentasi</a> --}}
                 </div>
             </div>
 
@@ -55,18 +46,18 @@
                 <div class="flex flex-col font-thin text-sm gap-4">
                     <a href="" class="hover:text-gray-400">Berita</a>
                     <a href="" class="hover:text-gray-400">Galeri</a>
-                    <a href="" class="hover:text-gray-400">Video</a>
+                    {{-- <a href="" class="hover:text-gray-400">Video</a> --}}
                 </div>
             </div>
 
             <!-- Contact Section -->
-            <div class="flex flex-col items-center md:items-start">
+            {{-- <div class="flex flex-col items-center md:items-start">
                 <p class="font-semibold text-lg underline underline-offset-8 mb-4">Hubungi</p>
                 <div class="flex flex-col font-thin text-sm gap-4">
                     <a href="" class="hover:text-gray-400">Alamat</a>
                     <a href="" class="hover:text-gray-400">No. HP</a>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
         <!-- Copyright Section -->
