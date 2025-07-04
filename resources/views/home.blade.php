@@ -233,7 +233,7 @@
     </div> --}}
 
 
-        </div>
+        {{-- </div> --}}
         {{-- $6 --}}
         <div class="bg-black w-full p-16 text-white">
             <p class="italic text-center">GALERI ADAM...</p>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use App\Models\SignatureNews;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class SignatureNewsController extends Controller
 {
@@ -23,9 +25,9 @@ class SignatureNewsController extends Controller
             'image' => 'required|image',
             'category' => 'required|string|max:255',  // Menambahkan validasi kategori
         ]);
-    
+
         $imagePath = $request->file('image')->store('news', 'public');
-    
+
         SignatureNews::create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
@@ -34,10 +36,10 @@ class SignatureNewsController extends Controller
             'category' => $request->category,  // Menyimpan kategori
             'is_featured' => false,  // Default to not featured
         ]);
-    
+
         return redirect()->route('signaturenews.index')->with('success', 'News created successfully.');
     }
-    
+
     public function update(Request $request, SignatureNews $news)
     {
         // Validation
@@ -48,7 +50,7 @@ class SignatureNewsController extends Controller
             'image' => 'nullable|image',  // Image is optional for updates
             'category' => 'required|string|max:255',  // Validasi kategori
         ]);
-    
+
         // Check if an image is uploaded, and if so, store it
         if ($request->hasFile('image')) {
             // Delete the old image if a new one is uploaded
@@ -56,25 +58,25 @@ class SignatureNewsController extends Controller
                 // Delete the old image from storage
                 Storage::delete('public/' . $news->image);
             }
-    
+
             // Store the new image
             $imagePath = $request->file('image')->store('news', 'public');
             $news->image = $imagePath;
         }
-    
+
         // Update the fields
         $news->title = $request->title;
         $news->subtitle = $request->subtitle;
         $news->link = $request->link;
         $news->category = $request->category;  // Update category
-    
+
         // Save the updated news record
         $news->save();
-    
+
         // Redirect back with success message
         return redirect()->route('signaturenews.index')->with('success', 'News updated successfully.');
     }
-    
+
 
 
 

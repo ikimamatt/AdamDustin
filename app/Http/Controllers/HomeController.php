@@ -55,10 +55,11 @@ class HomeController extends Controller
 
     public function profil()
     {
+           $allnews = SignatureNews::all();
         $logo = Logo::first();
     $socialMedia = SocialMedia::first() ?? new SocialMedia();
 
-        return view('Profil', compact('logo', 'socialMedia'));
+        return view('Profil', compact('logo', 'socialMedia', 'allnews'));
     }
     public function galery()
     {
