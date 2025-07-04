@@ -172,11 +172,11 @@
 
 
         {{-- #4 --}}
-        <div class="bg-black w-full text-white p-16 xl:px-32 my-10">
+        {{-- <div class="bg-black w-full text-white p-16 xl:px-32 my-10">
             <p class="font-thin italic">GERAKAN ADAM...</p>
-            <p class="text-3xl font-semibold max-w-xl">{{ $mainquotes->text }}</p>
+            <p class="text-3xl font-semibold max-w-xl">{{ $mainquotes->text }}</p> --}}
             {{-- isi gerakan --}}
-            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+            {{-- <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
             @foreach($quote as $items)
                 <div class="w-full">
                     <p class="font-semibold text-lg pb-4">{{ $items->title }}</p>
@@ -186,11 +186,34 @@
                 </div>
                 @endforeach
             </div>
+        </div> --}}
+
+
+       {{-- #4 --}}
+        <div class="bg-black w-full text-white p-16 xl:px-32 my-10">
+            <div class="custom-container">
+                <div class="custom-left-column">
+                    @php
+                        // Ekstrak ID video dari URL
+                        $videoId = null;
+                        if (preg_match('/(?:https?:\/\/(?:www\.)?youtu\.be\/|(?:https?:\/\/(?:www\.)?youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)))([a-zA-Z0-9_-]{11})/', $videoLink->link, $matches)) {
+                            $videoId = $matches[1];
+                        }
+                    @endphp
+                    <p class="custom-italic">VIDEO ADAM...</p>
+                    <p class="custom-font-semibold">Inspirasi Dari Adam Dustin</p>
+                    <p class="custom-font-base">Temukan konten video inspiratif dari Mas Sandi yang penuh dengan informasi dikemas dengan gaya bahasa kekinian yang tetap seru untuk ditonton.</p>
+                    <a href="{{ ($videoLink->link) }}" target="_blank" class="custom-link-button bg-white text-black">Lihat Lebih Lanjut</a>
+                </div>
+                <div class="custom-right-column">
+                    <iframe src="https://www.youtube.com/embed/{{ $videoId }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
 
 
         {{-- #5 --}}
-    <div class="custom-container">
+    {{-- <div class="custom-container">
         <div class="custom-left-column">
             @php
                 // Ekstrak ID video dari URL
@@ -207,7 +230,7 @@
         <div class="custom-right-column">
             <iframe src="https://www.youtube.com/embed/{{ $videoId }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-    </div>
+    </div> --}}
 
 
         </div>
