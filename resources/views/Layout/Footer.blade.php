@@ -22,7 +22,7 @@
 
             <!-- Social Media Section -->
             <div class="flex flex-col items-center md:items-start">
-                <p class="font-semibold text-lg underline underline-offset-8 mb-4">Social</p>
+                <p class="font-semibold text-lg underline underline-offset-8 mb-4">Social Media</p>
                <div class="flex flex-col font-thin text-sm gap-4">
                     <a href="{{ $socialMedia->instagram }}" target="_blank" class="hover:text-gray-400">Instagram</a>
                     <a href="{{ $socialMedia->facebook }}" target="_blank" class="hover:text-gray-400">Facebook</a>

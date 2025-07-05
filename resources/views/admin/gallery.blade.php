@@ -16,38 +16,44 @@
             <div class="card-body">
                 <h5 class="card-title">Gallery</h5>
 
-                <!-- Loop through each gallery -->
-                @foreach($galleries as $gallery)
-                    <form action="{{ route('gallery.update', $gallery->id) }}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        @method('PUT') <!-- Using PUT method for update -->
-
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="image">Image</label>
-                                <input type="file" class="form-control-file" id="image" name="image" accept="image/*">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($galleries as $gallery)
+                        <tr>
+                            <th scope="row">{{ $gallery->id }}</th>
+                            <td>
                                 @if($gallery->image)
-                                    <div class="mt-2">
-                                        <a href="{{ asset('storage/' . $gallery->image) }}" data-toggle="lightbox" data-gallery="example-gallery">
-                                            <img src="{{ asset('storage/' . $gallery->image) }}" alt="Gallery Image" width="100" class="img-thumbnail">
-                                        </a>
-                                    </div>
+                                <a href="{{ asset('storage/' . $gallery->image) }}" data-toggle="lightbox" data-gallery="example-gallery">
+                                    <img src="{{ asset('storage/' . $gallery->image) }}" alt="Gallery Image" width="100" class="img-thumbnail">
+                                </a>
                                 @endif
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary d-block mt-3">Update</button>
-                    </form>
-
-                    <!-- Delete Button Form -->
-                    <form action="{{ route('gallery.destroy', $gallery->id) }}" method="POST" style="display:inline;">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger d-block mt-3">Delete</button>
-                    </form>
-                    <hr> <!-- Optional: adds a line between each form -->
-                @endforeach
-
+                            </td>
+                            <td>
+                                <form action="{{ route('gallery.update', $gallery->id) }}" method="POST" enctype="multipart/form-data" class="d-inline-block">
+                                    @csrf
+                                    @method('PUT')
+                                    <div class="form-group">
+                                        <input type="file" class="form-control-file" name="image" accept="image/*" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-sm">Update</button>
+                                </form>
+                                <form action="{{ route('gallery.destroy', $gallery->id) }}" method="POST" class="d-inline-block">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
