@@ -262,48 +262,43 @@
                 </div>
             </div>
         </div>
+
         {{-- #7 --}}
         <div class="p-16">
+            <p class="italic text-base xl:px-32">BERITA ADAM...</p>
+            <p class="font-semibold text-3xl xl:px-32">Ikut keseharian Adam Dustin</p>
+            <p class="bg-black w-20 mt-3 h-1 rounded-lg xl:ml-32"></p>
 
-    <p class="italic text-base xl:px-32">BERITA ADAM...</p>
-    <p class="font-semibold text-3xl xl:px-32">Ikut keseharian Adam Dustin</p>
-    <p class="bg-black w-20 mt-3 h-1 rounded-lg xl:ml-32"></p>
+            {{-- isi keseharian --}}
+            <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center mb-10">
+                <!-- Menampilkan hanya 6 berita -->
+                @foreach ($allnews->take(6) as $news)
+                    <a href="{{ $news->link }}" class="mt-10 relative overflow-hidden rounded-md shadow-md w-full max-w-xs mx-auto scale-100 hover:scale-105 transition ease-in-out duration-200">
+                        <div class="relative">
+                            <img src="{{ asset('storage/' . $news->image) }}" alt="{{ $news->title }}" class="w-full h-60 object-cover">
+                            <!-- Layer abu-abu dengan opacity -->
+                            <div class="absolute inset-0 bg-gray-800 opacity-50"></div>
+                            <div class="absolute bg-gradient-to-t from-gray-800 opacity-80 text-white p-2 bottom-0">
+                                <p class="text-xs lg:text-base max-w text-center rounded-sm px-2 p-1 text-black bg-white">
+                                    {{ $news->category }}
+                                </p>
+                                <p class="font-bold text-sm lg:text-lg">
+                                    {{ $news->title }}
+                                </p>
+                                <p class="font-thin text-xs lg:text-sm">
+                                    {{ $news->subtitle }}
+                                </p>
 
-    {{-- isi keseharian --}}
-    <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center mb-10">
-        <!-- Menampilkan hanya 6 berita -->
-        @foreach ($allnews->take(6) as $news)
-            <a href="{{ $news->link }}" class="mt-10 relative overflow-hidden rounded-md shadow-md w-full max-w-xs mx-auto scale-100 hover:scale-105 transition ease-in-out duration-200">
-                <div class="relative">
-                    <img src="{{ asset('storage/' . $news->image) }}" alt="{{ $news->title }}" class="w-full h-60 object-cover">
-                    <!-- Layer abu-abu dengan opacity -->
-                    <div class="absolute inset-0 bg-gray-800 opacity-50"></div>
-                    <div class="absolute bg-gradient-to-t from-gray-800 opacity-80 text-white p-2 bottom-0">
-                        <p class="text-xs lg:text-base max-w text-center rounded-sm px-2 p-1 text-black bg-white">
-                            {{ $news->category }}
-                        </p>
-                        <p class="font-bold text-sm lg:text-lg">
-                            {{ $news->title }}
-                        </p>
-                        <p class="font-thin text-xs lg:text-sm">
-                            {{ $news->subtitle }}
-                        </p>
-
-                    </div>
-                </div>
-            </a>
-        @endforeach
-    </div>
-
-
-    <div class="text-center mt-8">
-        <a href="{{ route('berita') }}" class="px-6 py-2 text-white bg-black hover:bg-gray-800 rounded-lg shadow-md transition-all duration-300">
-            Read More
-        </a>
-    </div>
-
-
-
+                            </div>
+                        </div>
+                    </a>
+                @endforeach
+            </div>
+            <div class="text-center mt-8">
+                <a href="{{ route('berita') }}" class="px-6 py-2 text-white bg-black hover:bg-gray-800 rounded-lg shadow-md transition-all duration-300">
+                    Read More
+                </a>
+            </div>
         </div>
 
 

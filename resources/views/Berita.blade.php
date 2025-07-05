@@ -61,13 +61,13 @@
                 <a href="{{ $news->link }}"
                     class="mt-10 relative overflow-hidden rounded-md shadow-md w-80 lg:w-96 xl:w-[550px] scale-100 hover:scale-105 transition ease-in-out duration-200">
                     <div>
-                        <img src="/img/berita.png" alt="" class="w-80 lg:w-96 xl:w-[550px]">
+                        <img src="{{ asset('storage/' . $news->image) }}" alt="{{ $news->title }}" alt="" class="w-80 lg:w-96 xl:w-[550px]">
                         <div class="absolute bg-gradient-to-t from-gray-800 opacity-80 text-white p-2 bottom-0">
                             <p
                                 class="text-xs lg:text-base max-w text-center rounded-sm px-2 p-1 text-black bg-white ">
                                 {{ $news->category }}</p>
                             <p class="font-bold text-sm lg:text-lg">{{ $news->title }}</p>
-                            <p class="font-thin text-xs lg:text-sm ">subtitle</p>
+                            <p class="font-thin text-xs lg:text-sm ">{{ $news->subtitle }}</p>
                         </div>
                     </div>
                 </a>
