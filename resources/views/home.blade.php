@@ -141,7 +141,7 @@
                     <p class="text-sm font-thin mb-4 sm:mb-6 xl:mb-10 max-w-full sm:max-w-96 text-justify">{{ $introduction->subtitle }}</p>
                 </div>
                 <div class="">
-                    <a href="" class="bg-black px-10 text-white rounded-full p-2 text-sm">Lebih Lanjut</a>
+                    <a href="{{ route('profil') }}" class="bg-black px-10 text-white rounded-full p-2 text-sm">Lebih Lanjut</a>
                 </div>
             </div>
         </div>

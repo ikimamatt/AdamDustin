@@ -31,7 +31,7 @@
 <body>
     @include('Layout.Navbar')
 
-    <div class=" w-full">
+    <div class="w-full overflow-x-hidden">
         {{-- #1 --}}
         <div class="bg-gradient-to-t from-black to-gray-400 h-[400px] xl:h-[600px] relative">
             <div class="bg-gradient-to-b from-black text-white h-full w-188 sm:w-1/2 left-16 absolute top-0 text-shift-left">
