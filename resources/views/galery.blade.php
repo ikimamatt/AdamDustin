@@ -38,17 +38,17 @@
             <img src="/img/org3.png" alt="" class="w-[400px] sm:w-[430px] lg:w-[450px] xl:w-[650px] absolute bottom-0 -right-10 md:right-20 lg:right-36 xl:right-72 img-shift-right">
         </div>
 
-       
+
 
         {{-- Gallery Section --}}
 <div class="px-16 xl:px-32 mb-10">
-    <p class="italic text-base">Galery ADAM...</p>
+    <p class="italic text-base pt-24">Galery ADAM...</p>
     <p class="font-semibold text-3xl">Ikut keseharian Adam Dustin</p>
     <p class="bg-black w-20 mt-3 h-1 rounded-lg"></p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
         <!-- Gallery Image 1 -->
-         
+
             @foreach($galleries as $gallery)
         <div class="relative group overflow-hidden rounded-md shadow-md aspect-[1/1] cursor-pointer" onclick="openImage('{{ asset('storage/' . $gallery->image) }}')">
             <img src="{{ asset('storage/' . $gallery->image) }}" alt="" class="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-110">
