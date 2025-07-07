@@ -41,7 +41,7 @@
             <img src="/img/org3.png" alt="" class="w-[400px] sm:w-[430px] lg:w-[450px] xl:w-[650px] absolute bottom-0 -right-10 md:right-20 lg:right-36 xl:right-72 img-shift-right">
         </div>
 
-        <div class="p-16 xl:px-32 padding-mobile">
+        {{-- <div class="p-16 xl:px-32 padding-mobile">
             <div class="flex">
                 <input type="text" name="" id="" placeholder="Cari Berita..."
                     class="text-white w-full p-3 placeholder:text-white placeholder:italic rounded-l-full bg-gradient-to-r from-black to-gray-400">
@@ -49,10 +49,10 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                 </svg>
             </div>
-        </div>
+        </div> --}}
 
         {{-- #3 --}}
-        <div class="">
+        <div class="pt-24">
             <p class="italic text-base px-16 xl:px-32">BERITA ADAM...</p>
             <p class="font-semibold text-3xl px-16 xl:px-32">Ikut keseharian Adam Dustin</p>
             <p class="bg-black w-20 mt-3 h-1 rounded-lg ml-16 xl:ml-32"></p>

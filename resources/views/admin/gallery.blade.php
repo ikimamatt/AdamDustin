@@ -36,11 +36,11 @@
                                 @endif
                             </td>
                             <td>
-                                <form action="{{ route('gallery.update', $gallery->id) }}" method="POST" enctype="multipart/form-data" class="d-inline-block">
+                                <form action="{{ route('gallery.update', $gallery->id) }}" method="POST" enctype="multipart/form-data" class="d-inline-block gallery-form">
                                     @csrf
                                     @method('PUT')
                                     <div class="form-group">
-                                        <input type="file" class="form-control-file" name="image" accept="image/*" required>
+                                        <input type="file" class="form-control-file image-upload-validation" name="image" accept="image/*" required>
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-sm">Update</button>
                                 </form>
@@ -73,11 +73,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('gallery.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('gallery.store') }}" method="POST" enctype="multipart/form-data" class="gallery-form">
                     @csrf
                     <div class="form-group">
                         <label for="image">Image</label>
-                        <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+                        <input type="file" class="form-control-file image-upload-validation" id="image" name="image" accept="image/*" required>
                     </div>
                     <button type="submit" class="btn btn-primary d-block mt-3">Save</button>
                 </form>
@@ -93,10 +93,28 @@
 
 @push('scripts')
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const fileInputs = document.querySelectorAll('.image-upload-validation');
+            const maxFileSize = 2 * 1024 * 1024; // 2MB
+
+            fileInputs.forEach(function(input) {
+                input.addEventListener('change', function(event) {
+                    const file = event.target.files[0];
+                    if (file && file.size > maxFileSize) {
+                        alert('File is too large! Maximum size is 2MB.');
+                        // Clear the file input
+                        event.target.value = '';
+                    }
+                });
+            });
+        });
+
         // Initialize modal logic for adding new gallery
         var editModal = document.getElementById('exampleModal');
-        editModal.addEventListener('show.bs.modal', function (event) {
-            // Set form action or other dynamic data if needed
-        });
+        if (editModal) {
+            editModal.addEventListener('show.bs.modal', function (event) {
+                // Set form action or other dynamic data if needed
+            });
+        }
     </script>
 @endpush

@@ -34,7 +34,7 @@
             <div class="flex flex-col items-center md:items-start">
                 <p class="font-semibold text-lg underline underline-offset-8 mb-4">Profil</p>
                 <div class="flex flex-col font-thin text-sm gap-4">
-                    <a href="" class="hover:text-gray-400">Profil</a>
+                    <a href="{{ route('profil') }}" class="hover:text-gray-400">Profil</a>
                     {{-- <a href="" class="hover:text-gray-400">Berita</a>
                     <a href="" class="hover:text-gray-400">Dokumentasi</a> --}}
                 </div>
@@ -44,8 +44,8 @@
             <div class="flex flex-col items-center md:items-start">
                 <p class="font-semibold text-lg underline underline-offset-8 mb-4">Kegiatan</p>
                 <div class="flex flex-col font-thin text-sm gap-4">
-                    <a href="" class="hover:text-gray-400">Berita</a>
-                    <a href="" class="hover:text-gray-400">Galeri</a>
+                    <a href="{{ route('berita') }}" class="hover:text-gray-400">Berita</a>
+                    <a href="{{ route('galery') }}" class="hover:text-gray-400">Galeri</a>
                     {{-- <a href="" class="hover:text-gray-400">Video</a> --}}
                 </div>
             </div>

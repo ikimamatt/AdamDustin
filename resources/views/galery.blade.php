@@ -38,15 +38,7 @@
             <img src="/img/org3.png" alt="" class="w-[400px] sm:w-[430px] lg:w-[450px] xl:w-[650px] absolute bottom-0 -right-10 md:right-20 lg:right-36 xl:right-72 img-shift-right">
         </div>
 
-        <div class="p-16 xl:px-32 padding-mobile">
-            <div class="flex">
-                <input type="text" name="" id="" placeholder="Cari Berita..."
-                    class="text-white w-full p-3 placeholder:text-white placeholder:italic rounded-l-full bg-gradient-to-r from-black to-gray-400">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12 p-2 rounded-r-full my-auto bg-gray-400">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                </svg>
-            </div>
-        </div>
+       
 
         {{-- Gallery Section --}}
 <div class="px-16 xl:px-32 mb-10">
