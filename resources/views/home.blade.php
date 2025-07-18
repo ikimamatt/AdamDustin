@@ -190,7 +190,7 @@
 
 
        {{-- #4 --}}
-        <div class="bg-black w-full text-white p-16 xl:px-32 my-10">
+        {{-- <div class="bg-black w-full text-white p-16 xl:px-32 my-10">
             <div class="custom-container">
                 <div class="custom-left-column">
                     @php
@@ -209,7 +209,7 @@
                     <iframe src="https://www.youtube.com/embed/{{ $videoId }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
 
         {{-- #5 --}}
