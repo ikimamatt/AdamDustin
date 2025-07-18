@@ -236,9 +236,11 @@
         {{-- </div> --}}
         {{-- $6 --}}
         <div class="bg-black w-full p-16 text-white">
-            <p class="italic text-center">GALERI ADAM...</p>
-            <p class="font-semibold text-3xl text-center max-w-96 mx-auto mb-8">Momen Adam Dustin Dalam Kegiatan
+            {{-- <p class="italic text-center">GALERI ADAM...</p> --}}
+            {{-- <p class="font-semibold text-3xl text-center max-w-96 mx-auto mb-8">Momen Adam Dustin Dalam Kegiatan
                 Sehari-hari
+            </p> --}}
+               <p class="font-semibold text-3xl text-center max-w-96 mx-auto mb-8">Galery Adam Dustin</p>
             </p>
             <div class="bg-white w-20 h-1 rounded-lg mx-auto"></div>
         </div>
