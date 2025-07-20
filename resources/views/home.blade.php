@@ -130,18 +130,50 @@
 
 
         {{-- #2 --}}
-        <div style="width: 100%; padding: 1.25rem 0; display: flex; flex-direction: column; gap: 1.25rem; justify-content: center;">
-            {{-- gambar --}}
-            <img src="{{ asset('storage/' . $introduction->image) }}" alt="" style="width: 240px; height: auto; object-fit: contain; margin: 0 auto;">
+        <style>
+            @media (min-width: 1024px) {
+                .section-2-container {
+                    flex-direction: row !important;
+                    align-items: center !important;
+                    gap: 2rem !important;
+                    padding: 2rem 4rem !important;
+                }
+                
+                .section-2-image {
+                    width: 300px !important;
+                    margin: 0 !important;
+                    flex-shrink: 0 !important;
+                }
+                
+                .section-2-content {
+                    flex: 1 !important;
+                    padding: 0 !important;
+                    text-align: left !important;
+                }
+                
+                .section-2-title {
+                    font-size: 1.5rem !important;
+                    max-width: none !important;
+                }
+                
+                .section-2-description {
+                    max-width: none !important;
+                }
+            }
+        </style>
 
-            <div style="display: flex; flex-direction: column; gap: 1.25rem; padding: 1rem;">
+        <div class="section-2-container" style="width: 100%; padding: 1.25rem 0; display: flex; flex-direction: column; gap: 1.25rem; justify-content: center;">
+            {{-- gambar --}}
+            <img src="{{ asset('storage/' . $introduction->image) }}" alt="" class="section-2-image" style="width: 240px; height: auto; object-fit: contain; margin: 0 auto;">
+
+            <div class="section-2-content" style="display: flex; flex-direction: column; gap: 1.25rem; padding: 1rem;">
                 <div>
                     <p style="font-size: 0.875rem; font-style: italic; text-align: justify;">MENGENAL Adam DUSTIN BHAKTI...</p>
-                    <p style="font-size: 1.125rem; font-weight: bold; text-align: justify; word-wrap: break-word; max-width: 300px;">{{ $introduction->title }}</p>
-                    <p style="font-size: 0.875rem; font-weight: 300; margin-bottom: 1rem; max-width: 384px; text-align: justify;">{{ $introduction->subtitle }}</p>
+                    <p class="section-2-title" style="font-size: 1.125rem; font-weight: bold; text-align: justify; word-wrap: break-word; max-width: 300px;">{{ $introduction->title }}</p>
+                    <p class="section-2-description" style="font-size: 0.875rem; font-weight: 300; margin-bottom: 1rem; max-width: 384px; text-align: justify;">{{ $introduction->subtitle }}</p>
                 </div>
                 <div>
-                    <a href="{{ route('profil') }}" style="background-color: black; padding: 0.5rem 2.5rem; color: white; border-radius: 9999px; font-size: 0.875rem; text-decoration: none; display: inline-block;">Lebih Lanjut</a>
+                    <a href="{{ route('profil') }}" style="background-color: black; padding: 0.5rem 2.5rem; color: white; border-radius: 9999px; font-size: 0.875rem; text-decoration: none; display: inline-block;"> Baca Lebih Lanjut</a>
                 </div>
             </div>
         </div>

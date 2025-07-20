@@ -30,17 +30,22 @@
         <div class="w-full px-4 sm:px-16 xl:px-32 flex flex-col gap-5">
             <div class="text-center">
                 <p class="text-sm italic">MENGENAL ADAM DUSTIN BHAKTI...</p>
-                <p class="text-2xl font-bold">Memulai Pekerjaan Baru di</p>
-                <p class="text-2xl font-bold">Lexa-Pearce Indonesia</p>
+                <p class="text-2xl font-bold">Saya Adam Dustin Bhakti,</p>
+                <p class="text-2xl font-bold">Perintis Harapan dari kalimantan Timur</p>
                 <p class="bg-black w-20 my-3 h-1 rounded-lg mx-auto xl:ml-32"></p>
             </div>
             <div class="flex flex-col md:flex-row gap-6 items-center md:items-start">
                 <img src="/img/profil1.png" alt="Profil Adam Dustin Bhakti" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-contain md:w-1/2">
                 <div class="flex flex-col gap-4 w-full md:w-1/2">
-                    <p class="text-sm font-thin mt-4">Adam percaya bahwa 3 sampai 5 teman terdekat menentukan karier dan nasib 5-10 tahun ke depan. Dengan bergabung di komunitas seperti HIPMI, ia menemukan semangat berwirausaha yang terus membara.</p>
-                    <p class="text-sm font-thin mt-1">Ia menekankan pentingnya kolaborasi: "Jika ingin cepat, lari sendiri. Jika ingin jauh, berlari bersama." Bisnis yang stabil, menurutnya, lahir dari sinergi tim yang solid.</p>
-                    <p class="text-sm font-thin mt-1">Bagi pemula, Adam menyarankan untuk belajar menjadi terbaik di bidangnya sebelum membangun tim. Untuk yang sudah mapan, ia mendorong pembentukan "super team" untuk pertumbuhan eksponensial.</p>
-                    <p class="text-sm font-thin mt-1">Visinya bukan sekadar kaya raya, tetapi bermanfaat bagi banyak orang. Dengan mengubah pola pikir ini, ia mampu mengelola keuangan secara bijak, mendukung keluarga, dan komunitasnya.</p>
+                    <p class="text-sm font-thin mt-4">Saya lahir dan besar di Balikpapan, kota yang membentuk karakter, mimpi, dan semangat perjuangan saya. Dari kota ini, saya belajar bahwa menjadi besar tidak harus menunggu datangnya kesempatan, tapi menciptakan sendiri jalan menuju masa depan.</p>
+                    <p class="text-sm font-thin mt-1">Saya memulai perjalanan sebagai pengusaha lokal, dan perlahan membuktikan bahwa karya dari daerah pun bisa bersaing di tingkat nasional. Sebagai CEO Lexa Event, saya tidak hanya membangun perusahaan, tapi membangun ekosistem. Bersama tim, kami menjadikan Lexa sebagai ruang kolaborasi lintas sektor, dari event kreatif, pengembangan talenta muda, hingga pemberdayaan UMKM yang menjadi tulang punggung ekonomi bangsa.</p>
+                    <p class="text-sm font-thin mt-1">Saya percaya bahwa tidak ada yang tidak mungkin, selama kita memiliki mindset yang benar, konsistensi dalam melangkah, dan keberanian untuk bekerja keras tanpa henti. Prinsip ini pula yang saya bawa saat dipercaya menjadi Ketua HIPMI dan Ketua ESI Balikpapan, dua ruang yang saya gunakan untuk membina kewirausahaan dan memajukan ekonomi kreatif.</p>
+                    <p class="text-sm font-thin mt-1">Saya tidak mengejar sorotan. Saya memilih menjadi perintis, membuka jalan, membangun ekosistem, dan menjadi jembatan antara mimpi masyarakat dan masa depan yang lebih baik.
+                    </p>
+                    <p class="text-sm font-thin mt-1">“Saya hanya ingin menjadi seseorang yang bisa diandalkan — yang menjadikan harapan sebagai kenyataan, lewat kerja nyata.”
+                    </p>
+                    <p class="text-sm font-thin mt-1">Karena saya percaya: mimpi adalah tanggung jawab, dan harapan adalah janji yang harus ditepati.Inilah alasan saya terus melangkah, selama masih ada usaha kecil yang butuh dukungan, generasi muda yang butuh ruang, dan masyarakat yang pantas mendapatkan masa depan yang lebih baik..
+                    </p>
                 </div>
             </div>
             {{-- <div class="text-center mt-4">
@@ -48,27 +53,26 @@
             </div> --}}
         </div>
 
-        <div class="w-full py-28 px-4 lg:px-16 xl:px-32 flex flex-col gap-4 justify-center">
-            <p class="text-xl font-bold text-center lg:text-left">Terhubung dengan Adam Dustin</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full">
-                <a href="" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/sosmed.png" class="w-full h-auto object-cover" alt="Facebook">
-                    <p class="absolute bottom-2 left-2 font-bold text-white">Facebook</p>
+        <div style="width: 100%; padding: 1.25rem 1rem; display: flex; flex-direction: column; gap: 1rem; justify-content: center;">
+            <p style="font-size: 1.25rem; font-weight: bold; text-align: center;">Terhubung dengan Adam Dustin</p>
+            <div style="display: flex; justify-content: center; gap: 1rem;">
+                <a href="{{ $socialMedia->facebook }}" target="_blank" style="display: flex; flex-direction: column; align-items: center; transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/img/facebook.png" style="width: 64px;" alt="">
+                    <p style="font-weight: bold; color: black; margin-top: 0.5rem;">Facebook</p>
                 </a>
-                <a href="" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/sosmed.png" class="w-full h-auto object-cover" alt="Instagram">
-                    <p class="absolute bottom-2 left-2 font-bold text-white">Instagram</p>
+                <a href="{{ $socialMedia->instagram }}" target="_blank" style="display: flex; flex-direction: column; align-items: center; transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/img/instagram.png" style="width: 64px;" alt="">
+                    <p style="font-weight: bold; color: black; margin-top: 0.5rem;">Instagram</p>
                 </a>
-                <a href="" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/sosmed.png" class="w-full h-auto object-cover" alt="Tiktok">
-                    <p class="absolute bottom-2 left-2 font-bold text-white">Tiktok</p>
+                <a href="{{ $socialMedia->tiktok }}" target="_blank" style="display: flex; flex-direction: column; align-items: center; transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/img/tiktok.png" style="width: 64px;" alt="">
+                    <p style="font-weight: bold; color: black; margin-top: 0.5rem;">Tiktok</p>
                 </a>
-                <a href="" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/sosmed.png" class="w-full h-auto object-cover" alt="Twitter">
+                <!-- <a href="{{ $socialMedia->twitter }}" target="_blank" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
+                    <img src="/img/sosmed.png" class="w-32 sm:w-40 lg:w-[219px] xl:w-[313px]" alt="">
                     <p class="absolute bottom-2 left-2 font-bold text-white">Twitter</p>
-                </a>
+                </a> -->
             </div>
-        </div>
 
 
         {{-- #6 --}}
