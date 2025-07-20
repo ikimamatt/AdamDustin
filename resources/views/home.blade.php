@@ -130,38 +130,38 @@
 
 
         {{-- #2 --}}
-        <div class="w-full py-5 flex flex-col lg:flex-row gap-5 justify-center">
+        <div style="width: 100%; padding: 1.25rem 0; display: flex; flex-direction: column; gap: 1.25rem; justify-content: center;">
             {{-- gambar --}}
-            <img src="{{ asset('storage/' . $introduction->image) }}" alt="" class="w-60 sm:w-80 xl:w-96 max-h-60 xl:max-h-none mx-auto lg:mx-0">
+            <img src="{{ asset('storage/' . $introduction->image) }}" alt="" style="width: 240px; height: auto; object-fit: contain; margin: 0 auto;">
 
-            <div class="flex flex-col gap-5 p-4">
-                <div class="">
-                    <p class="text-sm italic text-justify">MENGENAL Adam DUSTIN BHAKTI...</p>
-                    <p class="title text-lg sm:text-xl font-bold text-justify">{{ $introduction->title }}</p>
-                    <p class="text-sm font-thin mb-4 sm:mb-6 xl:mb-10 max-w-full sm:max-w-96 text-justify">{{ $introduction->subtitle }}</p>
+            <div style="display: flex; flex-direction: column; gap: 1.25rem; padding: 1rem;">
+                <div>
+                    <p style="font-size: 0.875rem; font-style: italic; text-align: justify;">MENGENAL Adam DUSTIN BHAKTI...</p>
+                    <p style="font-size: 1.125rem; font-weight: bold; text-align: justify; word-wrap: break-word; max-width: 300px;">{{ $introduction->title }}</p>
+                    <p style="font-size: 0.875rem; font-weight: 300; margin-bottom: 1rem; max-width: 384px; text-align: justify;">{{ $introduction->subtitle }}</p>
                 </div>
-                <div class="">
-                    <a href="{{ route('profil') }}" class="bg-black px-10 text-white rounded-full p-2 text-sm">Lebih Lanjut</a>
+                <div>
+                    <a href="{{ route('profil') }}" style="background-color: black; padding: 0.5rem 2.5rem; color: white; border-radius: 9999px; font-size: 0.875rem; text-decoration: none; display: inline-block;">Lebih Lanjut</a>
                 </div>
             </div>
         </div>
 
 
         {{-- #3 --}}
-        <div class="w-full py-5 px-4 lg:px-16 xl:px-32 flex flex-col gap-4 justify-center">
-            <p class="text-xl font-bold text-center lg:text-left">Terhubung dengan Adam Dustin</p>
-            <div class="flex justify-center gap-4">
-                <a href="{{ $socialMedia->facebook }}" target="_blank" class="flex flex-col items-center scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/facebook.png" class="w-16 sm:w-20 lg:w-24 xl:w-28" alt="">
-                    <p class="font-bold text-black mt-2">Facebook</p>
+        <div style="width: 100%; padding: 1.25rem 1rem; display: flex; flex-direction: column; gap: 1rem; justify-content: center;">
+            <p style="font-size: 1.25rem; font-weight: bold; text-align: center;">Terhubung dengan Adam Dustin</p>
+            <div style="display: flex; justify-content: center; gap: 1rem;">
+                <a href="{{ $socialMedia->facebook }}" target="_blank" style="display: flex; flex-direction: column; align-items: center; transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/img/facebook.png" style="width: 64px;" alt="">
+                    <p style="font-weight: bold; color: black; margin-top: 0.5rem;">Facebook</p>
                 </a>
-                <a href="{{ $socialMedia->instagram }}" target="_blank" class="flex flex-col items-center scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/instagram.png" class="w-16 sm:w-20 lg:w-24 xl:w-28" alt="">
-                    <p class="font-bold text-black mt-2">Instagram</p>
+                <a href="{{ $socialMedia->instagram }}" target="_blank" style="display: flex; flex-direction: column; align-items: center; transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/img/instagram.png" style="width: 64px;" alt="">
+                    <p style="font-weight: bold; color: black; margin-top: 0.5rem;">Instagram</p>
                 </a>
-                <a href="{{ $socialMedia->tiktok }}" target="_blank" class="flex flex-col items-center scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/tiktok.png" class="w-16 sm:w-20 lg:w-24 xl:w-28" alt="">
-                    <p class="font-bold text-black mt-2">Tiktok</p>
+                <a href="{{ $socialMedia->tiktok }}" target="_blank" style="display: flex; flex-direction: column; align-items: center; transition: transform 0.2s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/img/tiktok.png" style="width: 64px;" alt="">
+                    <p style="font-weight: bold; color: black; margin-top: 0.5rem;">Tiktok</p>
                 </a>
                 <!-- <a href="{{ $socialMedia->twitter }}" target="_blank" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
                     <img src="/img/sosmed.png" class="w-32 sm:w-40 lg:w-[219px] xl:w-[313px]" alt="">
