@@ -152,15 +152,15 @@
             <p class="text-xl font-bold text-center lg:text-left">Terhubung dengan Adam Dustin</p>
             <div class="flex justify-center gap-4">
                 <a href="{{ $socialMedia->facebook }}" target="_blank" class="flex flex-col items-center scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/facebook.png" class="w-24 sm:w-32 lg:w-40 xl:w-48" alt="">
+                    <img src="/img/facebook.png" class="w-16 sm:w-20 lg:w-24 xl:w-28" alt="">
                     <p class="font-bold text-black mt-2">Facebook</p>
                 </a>
                 <a href="{{ $socialMedia->instagram }}" target="_blank" class="flex flex-col items-center scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/instagram.png" class="w-24 sm:w-32 lg:w-40 xl:w-48" alt="">
+                    <img src="/img/instagram.png" class="w-16 sm:w-20 lg:w-24 xl:w-28" alt="">
                     <p class="font-bold text-black mt-2">Instagram</p>
                 </a>
                 <a href="{{ $socialMedia->tiktok }}" target="_blank" class="flex flex-col items-center scale-100 hover:scale-105 transition ease-in-out duration-200">
-                    <img src="/img/tiktok.png" class="w-24 sm:w-32 lg:w-40 xl:w-48" alt="">
+                    <img src="/img/tiktok.png" class="w-16 sm:w-20 lg:w-24 xl:w-28" alt="">
                     <p class="font-bold text-black mt-2">Tiktok</p>
                 </a>
                 <!-- <a href="{{ $socialMedia->twitter }}" target="_blank" class="relative scale-100 hover:scale-105 transition ease-in-out duration-200">
