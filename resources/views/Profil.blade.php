@@ -22,13 +22,13 @@
             <img src="/img/org3.png" alt="" class="w-[400px] sm:w-[430px] lg:w-[450px] xl:w-[650px] absolute bottom-0 -right-10 md:right-20 lg:right-36 xl:right-72 img-shift-right">
         </div>
         {{-- #2 --}}
-        <div class="p-10 sm:p-16 xl:px-32 justify-center">
+        {{-- <div class="p-10 sm:p-16 xl:px-32 justify-center">
             <p>Adam Dustin Bhakti adalah pengusaha muda inspiratif dari Kalimantan Timur yang memimpin bisnis berkelanjutan hingga level nasional. Dengan semangat kolaborasi dan networking, ia aktif mendorong pertumbuhan ekonomi lokal melalui organisasi seperti HIPMI, menginspirasi generasi muda untuk bermimpi besar menuju Indonesia Emas 2045.</p>
-        </div>
+        </div> --}}
 
          {{-- #3 --}}
-        <div class="w-full px-4 sm:px-16 xl:px-32 flex flex-col gap-5">
-            <div class="text-center">
+        <div class="w-full px-4 sm:px-16 xl:px-32 flex flex-col gap-5 "  ">
+            <div class="text-center" style="padding-top: 24px;>
                 <p class="text-sm italic">MENGENAL ADAM DUSTIN BHAKTI...</p>
                 <p class="text-2xl font-bold">Saya Adam Dustin Bhakti,</p>
                 <p class="text-2xl font-bold">Perintis Harapan dari kalimantan Timur</p>
