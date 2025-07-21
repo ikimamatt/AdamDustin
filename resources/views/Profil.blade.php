@@ -27,30 +27,27 @@
         </div> --}}
 
          {{-- #3 --}}
-        <div class="w-full px-4 sm:px-16 xl:px-32 flex flex-col gap-5 "  ">
-            <div class="text-center" style="padding-top: 24px;>
-                <p class="text-sm italic">MENGENAL ADAM DUSTIN BHAKTI...</p>
-                <p class="text-2xl font-bold">Saya Adam Dustin Bhakti,</p>
-                <p class="text-2xl font-bold">Perintis Harapan dari kalimantan Timur</p>
-                <p class="bg-black w-20 my-3 h-1 rounded-lg mx-auto xl:ml-32"></p>
+        <div class="profil-section3">
+            <div class="profil-section3-header">
+                <p class="profil-section3-intro">MENGENAL ADAM DUSTIN BHAKTI...</p>
+                <p class="profil-section3-title">Saya Adam Dustin Bhakti,</p>
+                <p class="profil-section3-title">Perintis Harapan dari kalimantan Timur</p>
+                <p class="profil-section3-divider"></p>
             </div>
-            <div class="flex flex-col md:flex-row gap-6 items-center md:items-start">
-                <img src="/img/profil1.png" alt="Profil Adam Dustin Bhakti" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-contain md:w-1/2">
-                <div class="flex flex-col gap-4 w-full md:w-1/2">
-                    <p class="text-sm font-thin mt-4">Saya lahir dan besar di Balikpapan, kota yang membentuk karakter, mimpi, dan semangat perjuangan saya. Dari kota ini, saya belajar bahwa menjadi besar tidak harus menunggu datangnya kesempatan, tapi menciptakan sendiri jalan menuju masa depan.</p>
-                    <p class="text-sm font-thin mt-1">Saya memulai perjalanan sebagai pengusaha lokal, dan perlahan membuktikan bahwa karya dari daerah pun bisa bersaing di tingkat nasional. Sebagai CEO Lexa Event, saya tidak hanya membangun perusahaan, tapi membangun ekosistem. Bersama tim, kami menjadikan Lexa sebagai ruang kolaborasi lintas sektor, dari event kreatif, pengembangan talenta muda, hingga pemberdayaan UMKM yang menjadi tulang punggung ekonomi bangsa.</p>
-                    <p class="text-sm font-thin mt-1">Saya percaya bahwa tidak ada yang tidak mungkin, selama kita memiliki mindset yang benar, konsistensi dalam melangkah, dan keberanian untuk bekerja keras tanpa henti. Prinsip ini pula yang saya bawa saat dipercaya menjadi Ketua HIPMI dan Ketua ESI Balikpapan, dua ruang yang saya gunakan untuk membina kewirausahaan dan memajukan ekonomi kreatif.</p>
-                    <p class="text-sm font-thin mt-1">Saya tidak mengejar sorotan. Saya memilih menjadi perintis, membuka jalan, membangun ekosistem, dan menjadi jembatan antara mimpi masyarakat dan masa depan yang lebih baik.
+            <div class="profil-section3-content">
+                <img src="/img/profil1.png" alt="Profil Adam Dustin Bhakti" class="profil-section3-image">
+                <div class="profil-section3-text">
+                    <p class="profil-section3-paragraph">Saya lahir dan besar di Balikpapan, kota yang membentuk karakter, mimpi, dan semangat perjuangan saya. Dari kota ini, saya belajar bahwa menjadi besar tidak harus menunggu datangnya kesempatan, tapi menciptakan sendiri jalan menuju masa depan.</p>
+                    <p class="profil-section3-paragraph">Saya memulai perjalanan sebagai pengusaha lokal, dan perlahan membuktikan bahwa karya dari daerah pun bisa bersaing di tingkat nasional. Sebagai CEO Lexa Event, saya tidak hanya membangun perusahaan, tapi membangun ekosistem. Bersama tim, kami menjadikan Lexa sebagai ruang kolaborasi lintas sektor, dari event kreatif, pengembangan talenta muda, hingga pemberdayaan UMKM yang menjadi tulang punggung ekonomi bangsa.</p>
+                    <p class="profil-section3-paragraph">Saya percaya bahwa tidak ada yang tidak mungkin, selama kita memiliki mindset yang benar, konsistensi dalam melangkah, dan keberanian untuk bekerja keras tanpa henti. Prinsip ini pula yang saya bawa saat dipercaya menjadi Ketua HIPMI dan Ketua ESI Balikpapan, dua ruang yang saya gunakan untuk membina kewirausahaan dan memajukan ekonomi kreatif.</p>
+                    <p class="profil-section3-paragraph">Saya tidak mengejar sorotan. Saya memilih menjadi perintis, membuka jalan, membangun ekosistem, dan menjadi jembatan antara mimpi masyarakat dan masa depan yang lebih baik.
                     </p>
-                    <p class="text-sm font-thin mt-1">“Saya hanya ingin menjadi seseorang yang bisa diandalkan — yang menjadikan harapan sebagai kenyataan, lewat kerja nyata.”
+                    <p class="profil-section3-paragraph">“Saya hanya ingin menjadi seseorang yang bisa diandalkan — yang menjadikan harapan sebagai kenyataan, lewat kerja nyata.”
                     </p>
-                    <p class="text-sm font-thin mt-1">Karena saya percaya: mimpi adalah tanggung jawab, dan harapan adalah janji yang harus ditepati.Inilah alasan saya terus melangkah, selama masih ada usaha kecil yang butuh dukungan, generasi muda yang butuh ruang, dan masyarakat yang pantas mendapatkan masa depan yang lebih baik..
+                    <p class="profil-section3-paragraph">Karena saya percaya: mimpi adalah tanggung jawab, dan harapan adalah janji yang harus ditepati.Inilah alasan saya terus melangkah, selama masih ada usaha kecil yang butuh dukungan, generasi muda yang butuh ruang, dan masyarakat yang pantas mendapatkan masa depan yang lebih baik..
                     </p>
                 </div>
             </div>
-            {{-- <div class="text-center mt-4">
-                <a href="" class="bg-black px-10 text-white rounded-full p-2 text-sm">Lebih Lanjut</a>
-            </div> --}}
         </div>
 
         <div style="width: 100%; padding: 1.25rem 1rem; display: flex; flex-direction: column; gap: 1rem; justify-content: center;">
