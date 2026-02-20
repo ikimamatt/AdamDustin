@@ -45,7 +45,7 @@ class HomeController extends Controller
 
     public function berita()
     {
-        $allnews = SignatureNews::all();
+        $allnews = SignatureNews::orderBy('created_at', 'asc')->get();
     $socialMedia = SocialMedia::first() ?? new SocialMedia();
 
 

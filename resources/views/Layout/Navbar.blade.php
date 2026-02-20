@@ -10,7 +10,7 @@
 </head>
 <body class="font-poppins">
     <nav class="w-full z-30 fixed bg-black drop-shadow-xl shadow-white">
-        <div class="px-8 py-6 flex justify-between items-center">
+        <div class="px-8 py-2 flex justify-between items-center">
           <!-- Logo / Judul -->
           <img src="{{ asset('storage/' . $logo->profile_image) }}" alt="Profile Image" width="100" class="img-thumbnail">
 
